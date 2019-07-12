@@ -28,6 +28,11 @@ include_once("conectar.php");
             <li><a href="formularios/add_categoria.php">Categoria</a></li>
         </ul>
         </li>
+        <li><a href="">Representante</a>
+        <ul class="submenu">
+            <li><a href="formularios/add_usuario.php">Area do representante</a></li>
+        </ul>
+        </li>
     </ul>
     </nav>
 </div>
