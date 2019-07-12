@@ -1,0 +1,114 @@
+<select name="disease" >
+    <option value="" >--Select--</option>
+        <?php
+          $sql = "SELECT cetegoria FROM categoria";
+          $result = mysqli_query($sql);
+            while($row = mysqli_fetch_array($result)){
+        ?>
+    <option value ="<?php echo($row['categoria']);?>"><?php echo($row['categoria']);?></option>
+<?php
+}
+?>        
+</select>
+
+<!--Guardar-->
+
+<select name="categoria">
+  <option value="0" selected>Selecione uma categoria</option> 
+<?php
+$sql = "SELECT categoria FROM categoria";
+$res = mysqli_query($conn, $sql);
+
+// loop pelos registros
+while ($f = mysqli_fetch_array($res))
+{
+    echo "<option value="$f['categoria']">"$f['categoria']"</option>";
+}
+?>
+</select>
+
+<!--Guardar-->
+
+$conn = mysqlI_connect($host, $user, $pass, $db);
+ 
+$sql = "SELECT categoria FROM categoria";
+$res = mysqli_query($conn, $sql);
+
+// loop pelos registros
+while ($f = mysqli_fetch_array($res))
+{
+    echo "<option value="$f['nome']">""$f['nome']""</option>";
+}
+ 
+// fecha a conexão
+mysqli_close($conn);
+
+
+
+// cria a instrução SQL que vai selecionar os dados
+$query = sprintf("SELECT identificador, nome, telefone FROM cadastro");
+// executa a query
+$dados = mysql_query($query, $con) or die(mysql_error());
+// transforma os dados em um array
+$linha = mysql_fetch_assoc($dados);
+// calcula quantos dados retornaram
+$total = mysql_num_rows($dados);
+?>
+ 
+<html>
+    <head>
+    <title>Exemplo</title>
+</head>
+<body>
+<?php
+    // se o número de resultados for maior que zero, mostra os dados
+    if($total > 0) {
+        // inicia o loop que vai mostrar todos os dados
+        do {
+?>
+            <p><?=$linha['nome']?> / <?=$linha['telefone']?></p>
+<?php
+        // finaliza o loop que vai mostrar os dados
+        }while($linha = mysqli_fetch_assoc($dados));
+    // fim do if 
+    }
+?>
+
+
+<select name="categoria">
+  <option value="0" selected>Selecione uma categoria</option>
+  <?php
+  $row = mysqli_fetch_array($resultado) ; 
+  $looping = 1;
+  $i = $row.length;
+  while ($looping <= $i)  
+  {
+    echo $row["Name"];
+    $looping++;
+  }
+?>
+
+
+
+<select name="ano">
+  <option value="0" selected>Selecione uma categoria</option>
+  <?php
+  while (condição) {
+  ?>
+  
+  <?php
+    // bloco de código
+  } 
+  ?>
+  <option value="<?php ?>">
+  
+  </option>
+</select>
+<br>
+
+
+
+
+{loop="$dados"}
+    <td>{$value.setor}</td>
+{/loop}
