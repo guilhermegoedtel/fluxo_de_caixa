@@ -12,10 +12,10 @@ $senha = mysqli_real_escape_string($conn, $_POST['senha']);
 $senha = md5($senha);
 
 $result_acesso = "SELECT * FROM usuario";
-    $resultado_acesso = mysqli_query($conn, $result_acesso);
-    while($row_acesso = mysqli_fetch_assoc($resultado_acesso)){
-		$lv_acesso = $row_acesso['nv_acesso'];
-	}
+$resultado_acesso = mysqli_query($conn, $result_acesso);
+while($row_acesso = mysqli_fetch_assoc($resultado_acesso)){
+	$lv_acesso = $row_acesso['nv_acesso'];
+}
 
 $query = "select * from usuario where login = '{$login}' and senha = '{$senha}'";
 
