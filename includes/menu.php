@@ -1,5 +1,9 @@
 <?php
 session_start();
+if(!isset($_SESSION['autenticado'])){
+    header("location: ../index.php");
+    session_destroy();
+}
 include_once("conectar.php");
 ?>
 <html>
@@ -26,11 +30,6 @@ include_once("conectar.php");
         <ul class="submenu">
             <li><a href="formularios/add_usuario.php">Usuário</a></li>
             <li><a href="formularios/add_categoria.php">Categoria</a></li>
-        </ul>
-        </li>
-        <li><a href="">Representante</a>
-        <ul class="submenu">
-            <li><a href="formularios/add_usuario.php">Area do representante</a></li>
         </ul>
         </li>
     </ul>

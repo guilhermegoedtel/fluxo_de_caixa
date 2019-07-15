@@ -1,5 +1,9 @@
 <?php
 session_start();
+if(!isset($_SESSION['autenticado'])){
+  header("location: ../index.php");
+  session_destroy();
+}
 include_once("conectar.php");
 if(isset($_SESSION['msg'])){
 	echo $_SESSION['msg'];
