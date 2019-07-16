@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../includes/session.php';
+include_once("session.php");
 $nome = $_SESSION['nome'];
 ?>
 <html>
@@ -20,6 +20,7 @@ img{
 <body>
 <div id="header">
     <a href="#" class="d-block" style="color: white;"><?php echo "Olá, "."$nome";?></a>
+    <a href="#" class="d-block" style="color: white;">Sistema Fluxo de Caixa</a>
     <a href="sair.php"><img src="images/sair.png"></a>
 </div>
 </body>

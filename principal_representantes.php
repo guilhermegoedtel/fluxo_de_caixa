@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../includes/session.php';
+include 'includes/session.php';
 ?>
 <!DOCtype html>
 <head>
