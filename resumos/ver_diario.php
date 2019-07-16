@@ -1,9 +1,6 @@
 <?php
 session_start();
-if(!isset($_SESSION['autenticado'])){
-    header("location: ../index.php");
-    session_destroy();
-}
+include '../includes/session.php';
 include_once("conectar.php");
 
 $dia = $_POST['dia'];

@@ -13,7 +13,7 @@
 <form action="valida.php" method="POST">
   <input type="email" name="login" placeholder="login" required>
   <input type="password" name="senha" placeholder="Senha" required>
-  <input type="submit" value="enviar">
+  <input type="submit" value="Entrar">
 </form>
 </body>
 </html>
