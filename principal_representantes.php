@@ -11,9 +11,6 @@ include 'includes/session.php';
 <?php
 include 'includes/header.php';
 include 'includes/menu_representantes.php';
-?>
-<span id="msg"></span>
-<?php
 include 'includes/footer.php';
 ?>
 </body>

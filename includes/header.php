@@ -18,10 +18,25 @@ img{
 }
 </style>
 <body>
-<div id="header">
-    <a href="#" class="d-block" style="color: white;"><?php echo "Olá, "."$nome";?></a>
+<!--<div id="header">
+    <a href="#" class="d-block" style="color: white;"><?php //echo "Olá, "."$nome";?></a>
     <a href="#" class="d-block" style="color: white;">Sistema Fluxo de Caixa</a>
     <a href="sair.php"><img src="images/sair.png"></a>
+</div>-->
+
+
+
+<div id="page-content-wrapper">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <button class="btn btn-primary" id="menu-toggle"><?php echo "Olá, "."$nome";?></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+            <button type="button" class="btn btn-danger" onclick="location.href='sair.php'">Sair</button>
+            </li>
+          </ul>
+        </div>
+    </nav>
 </div>
 </body>
 </html>
