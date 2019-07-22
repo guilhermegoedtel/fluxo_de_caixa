@@ -15,6 +15,17 @@ include_once("conectar.php");
 <link href="css/simple-sidebar.css" rel="stylesheet">
 </head>
 <body>
+<div id="page-content-wrapper">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+            <button type="button" class="btn btn-info" onclick="location.href='../principal_representantes.php'">Voltar</button>
+            </li>
+          </ul>
+        </div>
+    </nav>
+</div>
 <table class="table table-bordered">
   <thead>
     <tr>

@@ -24,6 +24,7 @@ while($row_acesso = mysqli_fetch_assoc($resultado_acesso)){
 
 if($row != 1){
 	$_SESSION['nao_autenticado'] = true;
+	$_SESSION['msg'] = "<center>*Login ou senha incorreto*</center>";
 	header('Location: index.php');
 	exit();
 }else{

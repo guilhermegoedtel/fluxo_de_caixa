@@ -53,7 +53,10 @@ include_once("conectar.php");
             <br>
             <button type="button" class="btn btn-success" data-toggle="modal" data-target="#add_empresa">Adicionar Empresa</button><br>
             <button type="button" class="btn btn-warning" onclick="location.href='formularios/empresas_pessoal.php'">Ver empresas cadastradas</button>
-            <button type="button" class="btn btn-warning" onclick="location.href='formularios/todas_empresas.php'">Ver empresas já cadastradas</button>
+            <button type="button" class="btn btn-warning" onclick="location.href='formularios/todas_empresas.php'">Ver empresas já cadastradas</button><br>
+            <button type="button" class="btn btn-info" onclick="location.href='propostas.php'">Propostas</button>
+            <button type="button" class="btn btn-info" onclick="location.href='videos.php'">Ver Videos apresentação</button>
+            <button type="button" class="btn btn-info" onclick="location.href='empresas.php'">Gerencia Empresas</button>
         </div>
     </div>
 </div>
@@ -188,22 +191,6 @@ include_once("conectar.php");
     </div>
   </div>
 </div>
-<!--<script>
-    $(document).ready(function(){
-       $('#empresa').on('submit',function(event){
-        event.preventDefault();
-        //Receber dados do formulario
-        var dados = $("#empresa").serialize();
-        $.POST("includes/valida_empresa.php", dados, function(retorna){
-            if(retorna){
-                $("#msg").html('<div class="alert alert-success" role="alert">Empresa Cadastrada com sucesso</div>');
-            }else{
-
-            }
-        });
-       });
-    });
-</script>-->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

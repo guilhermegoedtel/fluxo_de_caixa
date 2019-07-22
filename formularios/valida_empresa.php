@@ -33,6 +33,7 @@ $celular = str_replace(")", "" ,$celular);
 $celular = str_replace("-", "" ,$celular);
 
 
+
 if($estado == ''){
     $_SESSION['msg'] = "<p style='color:red;'>Selecione um estado !</p>";
 	header("Location: add_empresa.php");
