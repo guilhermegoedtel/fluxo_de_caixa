@@ -87,7 +87,7 @@ include_once("conectar.php");
         </button>
       </div>
       <div class="modal-body">
-        <form action="includes/valida_empresa.php" method="POST">
+        <form action="includes/valida_empresa.php" method="POST" enctype="multipart/form-data">
             <div class="form-group">
                 <label>Razão Social:</label>
                 <input type="text" name="razao_social" class="form-control" id="razao_social" placeholder="Razão Social" required>
