@@ -43,7 +43,7 @@ $resultado_diario = mysqli_query($conn, $result_diario);
 while($row_diario = mysqli_fetch_assoc($resultado_diario)){
     ?>
     <tr>
-      <td><img src="data:image/jpg;base64,<?php echo $row_diario['logotipo'];?>"/></td>
+      <td><img src="data:image/jpg;base64,<?php echo $row_diario['logotipo'];?>" width="100" height="60"/></td>
       <td><?php echo $row_diario['nome_fantasia']; ?></td>
       <td><?php echo $row_diario['responsavel']; ?></td>
       <td><?php echo $row_diario['telefone']; ?></td>
