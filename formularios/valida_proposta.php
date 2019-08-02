@@ -6,6 +6,8 @@ $responsavel = $_SESSION['nome'];
 include_once("conectar.php");
 
 $nome_fantasia = $_POST['nome_fantasia'];
+/*$propostas = file_get_contents($_FILES['propostas']['tmp_name']);
+$propostas = base64_encode($propostas);*/
 
 $uploaddir = '../upload/';
 
