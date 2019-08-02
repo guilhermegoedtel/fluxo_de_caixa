@@ -64,6 +64,23 @@ $responsavel = $_SESSION['nome'];
         </div>
     </div>
 </div>
+<!--
+<div id="tela">
+    <nav class="navigation">
+        <ul class="mainmenu">
+            <li><a href="">Empresas</a>
+                <ul class="submenu">
+                    <li><button type="button" class="btn btn-success" data-toggle="modal" data-target="#add_empresa">
+                    Adicionar Empresa
+                    </button></li>
+                    <li><button type="button" class="btn btn-warning" onclick="location.href='formularios/empresas_pessoal.php'">Ver empresas cadastradas</button></li>
+                    <li><button type="button" class="btn btn-warning" onclick="location.href='formularios/todas_empresas.php'">Ver empresas já cadastradas</button></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</div>
+-->
 <div class="modal fade" id="add_empresa" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
