@@ -7,7 +7,8 @@ include_once("conectar.php");
 $razao_social = $_POST['razao_social'];
 $nome_fantasia = $_POST['nome_fantasia'];
 $cnpj = $_POST['cnpj'];
-$logotipo = $_POST['logotipo'];
+$logotipo = file_get_contents($_FILES['logotipo']['tmp_name']);
+$logotipo = base64_encode($logotipo);
 $endereco = $_POST['endereco'];
 $numero = $_POST['numero'];
 $complemento = $_POST['complemento'];
@@ -32,6 +33,10 @@ $telefone = str_replace("-", "" ,$telefone);
 $celular = str_replace("(", "" ,$celular);
 $celular = str_replace(")", "" ,$celular);
 $celular = str_replace("-", "" ,$celular);
+
+?>
+<!--<img src="data:image/jpg;base64,<?php //echo $logotipo ?>" />-->
+<?php
 
 if($estado == ''){
     $_SESSION['msg'] = "<p style='color:red;'>Selecione um estado !</p>";
