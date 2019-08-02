@@ -55,7 +55,7 @@ $responsavel = $_SESSION['nome'];
             <button type="button" class="btn btn-success" data-toggle="modal" data-target="#add_empresa">Adicionar Empresa</button><br>
             <button type="button" class="btn btn-warning" onclick="location.href='formularios/empresas_pessoal.php'">Ver empresas cadastradas</button>
             <button type="button" class="btn btn-warning" onclick="location.href='formularios/todas_empresas.php'">Ver empresas já cadastradas</button><br>
-            <button type="button" class="btn btn-info" onclick="location.href='propostas.php'">Propostas</button>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#propostas">Propostas</button>
             <button type="button" class="btn btn-info" onclick="location.href='videos.php'">Ver Videos apresentação</button>
             <button type="button" class="btn btn-info" onclick="location.href='empresas.php'">Gerencia Empresas</button>
             <button type="button" class="btn btn-info" onclick="location.href='resumos/calendario_de_visitas.php'">Ver visitas agendadas</button>
@@ -64,23 +64,6 @@ $responsavel = $_SESSION['nome'];
         </div>
     </div>
 </div>
-<!--
-<div id="tela">
-    <nav class="navigation">
-        <ul class="mainmenu">
-            <li><a href="">Empresas</a>
-                <ul class="submenu">
-                    <li><button type="button" class="btn btn-success" data-toggle="modal" data-target="#add_empresa">
-                    Adicionar Empresa
-                    </button></li>
-                    <li><button type="button" class="btn btn-warning" onclick="location.href='formularios/empresas_pessoal.php'">Ver empresas cadastradas</button></li>
-                    <li><button type="button" class="btn btn-warning" onclick="location.href='formularios/todas_empresas.php'">Ver empresas já cadastradas</button></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
-</div>
--->
 <div class="modal fade" id="add_empresa" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -286,6 +269,49 @@ $responsavel = $_SESSION['nome'];
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                 <input type="submit" name="visita" id="visita" value="Salvar" class="btn btn-primary">
+            </div>
+        </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="propostas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="propostasLabel">Cadastrar Propostas</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="formularios/valida_proposta.php" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label>Responsavel:</label>
+                <input type="text" name="responsavel" class="form-control" id="razao_social" value="<?php echo $responsavel; ?>" disabled="disabled" required>
+            </div>
+            <div class="form-group">
+                <label>Empresa:</label>
+                <select name="empresa" class="form-control" id="empresa">
+                    <option value="" selected>Selecione uma empresa</option>
+                    <?php
+                    $result = mysqli_query($conn,"SELECT nome_fantasia FROM cadastrar_empresa where responsavel='$responsavel'");
+                    while($row = mysqli_fetch_array($result)){
+                    ?>
+                    <option value ="<?php echo($row['nome_fantasia']);?>"><?php echo($row['nome_fantasia']);?></option>
+                    <?php
+                    }
+                    ?> 
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Proposta:</label>
+                <input type="file" name="propostas" class="form-control" id="propostas" placeholder="Proposta" required>
+            </div>
+        </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <input type="submit" name="propostas" id="propostas" value="Salvar" class="btn btn-primary">
             </div>
         </form>
     </div>
