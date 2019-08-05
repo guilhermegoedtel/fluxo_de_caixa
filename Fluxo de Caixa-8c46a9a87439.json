@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "fluxo-de-caixa-1563817325342",
+  "private_key_id": "8c46a9a87439526e95f9bdbd519189d6088cc55f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCqbnEp+LDrj7mC\nz4NP8JG7AIbZYcvsf4pmwpu6jwZiHYJDIH6LjFvkRJ8BKTCTLx3/S43eEel9GsPz\ntsfudxI0s1tYXbol4HdRLFBNbFWPEwtbsZuBszwCdyWRxemSaaHqdWYXbYLVEHcZ\nkIqLdqeUEW9cGluf/6640nE/QW0vhC1MQ7zcDmuH8wdNeFrwlNxIZZJvBhft2To5\njLI5lbyRRt/Gd0xjKhDm58gJLijQ68V3qy9qhW2WSkW6tYZPy56jkditbfXrZdj4\nn9TgRJyzoKn6j0k7RYveAsAHS5eF/SrlfxXUXs14fObh9L+2h7vJ1ziE8tnXnmJL\nG49WDmXxAgMBAAECggEAAtHeF9L+V95mVAmLh1QAUEEQahoz79k2HLBDd/cn9JF/\nC03nRBct2clwHUp9fBDtcNDy42HF3IDX7UFI3mtcSvCM/km6M8hahwZ5+2bzhTEM\nKP+ntlIVKAgJQEe/TyGl6Pl5Z4GzhoONyeeuICO13vV5I4Oo4I1AGn0aXDDgneat\nsNg1aTiPHyvDPhGLkbbWU+5/dg/InOLgxxW3tvAR4PJpzzqiKy2d4plrGGPuPymv\nPp9ho8OksuLjtg53nc4xfddmbPv6itlW//bHK29HHDYgOl5Grb1J7LNpCCh+T0NY\nEepy74RHJQKKURQ55g2oTC70MQZ+0dKbtcD6B0qA4QKBgQDl5M870pGss7T2X78q\nTDbD3/zxXRVayjdlc1g3ACBM1U4Jhq5WnozidFw+b8/jxZthbtnW2aR0e6rgciRm\nRxro1EyNSoPPE1nNy8tkkotqJ+n8eFFK+exyRj/m8P5RcXtbOsSibkLUaPx7ri12\nhcq05wGB4soAzHyhB55yQVG1kQKBgQC9yQPqTrbY1WuycTRLoNztVLihpXEHljqE\nFUDhHxi5aA9h5RRIlAtCnKzekH5rgWgratdGYb2cpr0PvdWJcddnX7ZSEY74AVFM\nmtQVHvly4k3wonuaS5EaqF74LScbnHJEtVVVjkiOf9L5gmrQ5LPp1vxJC9suDQXb\nzDtWxbn6YQKBgQCyd/+9REnc1aHNhiUEtCfrxe46ffW/Bq8crf+0qv9oRkuPr6OW\nEP30KzsVKX4tJ9HpQMISPeGioALWvSWu1NJ6H53SLh/HWRFlZyldyTo7zgKjAdCy\nMPUy/YBMS5hTJ5MJDsVqB8kP1vTzGxOmKFVmPNN5vtLs7dJuvFhwAG9rUQKBgFKx\nn+8cVTet5rtd8Ddz5E/VNo3YlKOFpgGfcSGmdxNycCFru6bUOwPPWNOxiiQ1wroI\nV7znIcN8M60EPmMhI4Z7genIlM8jY9VJMVfyoyaXzPYpFkpo2tUOwDLLGdtCE9g0\nWvZohNzyfW8SkJBs1qfxcQQzElHCgub+2mw4w4yBAoGBAMGDzDY5x+1YScu0Nk0N\n0eLWuuDx0BDp4Ggllla2bg0LXfrZKFF6rqAThkVI87b3mpI9FNHIapgW/Ys514sC\nf2miEh9yR42VNxnDl5hIUvZIRXQ+3QdBrNEJ+naRx3N+uvJtAnhN+xbpRNXmvsrh\nvP7tFtiazUe1a8NEtvZArL3Y\n-----END PRIVATE KEY-----\n",
+  "client_email": "fluxo-de-caixa@fluxo-de-caixa-1563817325342.iam.gserviceaccount.com",
+  "client_id": "100971970587096771358",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/fluxo-de-caixa%40fluxo-de-caixa-1563817325342.iam.gserviceaccount.com"
+}

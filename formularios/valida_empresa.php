@@ -32,8 +32,6 @@ $celular = str_replace("(", "" ,$celular);
 $celular = str_replace(")", "" ,$celular);
 $celular = str_replace("-", "" ,$celular);
 
-echo $logotipo;
-/*
 if($estado == ''){
     $_SESSION['msg'] = "<p style='color:red;'>Selecione um estado !</p>";
 	header("Location: add_empresa.php");
@@ -41,5 +39,5 @@ if($estado == ''){
     $result = "INSERT INTO cadastrar_empresa(razao_social, nome_fantasia, cnpj, logotipo, endereco, numero, complemento, bairro, estado, cidade, responsavel, telefone, celular, email, latitude, longitude, created)
     VALUES('$razao_social', '$nome_fantasia', '$cnpj', '$logotipo', '$endereco', '$numero', '$complemento', '$bairro', '$estado', '$cidade', '$responsavel', '$telefone', '$celular', '$email', '$latitude', '$longitude', NOW())";
     $resultado = mysqli_query($conn, $result);
-}*/
+}
 ?>

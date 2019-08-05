@@ -57,30 +57,14 @@ $responsavel = $_SESSION['nome'];
             <button type="button" class="btn btn-warning" onclick="location.href='formularios/todas_empresas.php'">Ver empresas já cadastradas</button><br>
             <button type="button" class="btn btn-info" data-toggle="modal" data-target="#propostas">Propostas</button>
             <button type="button" class="btn btn-info" onclick="location.href='videos.php'">Ver Videos apresentação</button>
-            <button type="button" class="btn btn-info" onclick="location.href='empresas.php'">Gerencia Empresas</button>
+            <button type="button" class="btn btn-info" onclick="location.href='formularios/ferramentas.php'">Gerenciar Ferramentas</button>
+            <button type="button" class="btn btn-info" onclick="location.href='formularios/empresas.php'">Comissão das vendas</button>
             <button type="button" class="btn btn-info" onclick="location.href='resumos/calendario_de_visitas.php'">Ver visitas agendadas</button>
             <button type="button" class="btn btn-info" data-toggle="modal" data-target="#visita">Cadastrar nova visita</button>
             <button type="button" class="btn btn-info" data-toggle="modal" data-target="#acompanhamento">Acompanhamento de visitas</button>
         </div>
     </div>
 </div>
-<!--
-<div id="tela">
-    <nav class="navigation">
-        <ul class="mainmenu">
-            <li><a href="">Empresas</a>
-                <ul class="submenu">
-                    <li><button type="button" class="btn btn-success" data-toggle="modal" data-target="#add_empresa">
-                    Adicionar Empresa
-                    </button></li>
-                    <li><button type="button" class="btn btn-warning" onclick="location.href='formularios/empresas_pessoal.php'">Ver empresas cadastradas</button></li>
-                    <li><button type="button" class="btn btn-warning" onclick="location.href='formularios/todas_empresas.php'">Ver empresas já cadastradas</button></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
-</div>
--->
 <div class="modal fade" id="add_empresa" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -226,10 +210,6 @@ $responsavel = $_SESSION['nome'];
                     ?> 
                 </select>
             </div>
-            <!--<div class="form-group">
-                <label>Data da próxima visita:</label>
-                <input type="date" name="data_hora" class="form-control" id="data_hora" required>
-            </div>-->
             <div class="form-group">
                 <label>Resumo da Visita atual:</label>
                 <textarea name="mensagem" class="form-control" id="mensagem" placeholder="Resumo da Visita"></textarea>
