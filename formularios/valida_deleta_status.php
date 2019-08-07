@@ -15,7 +15,14 @@ if($exclusao == 'nao'){
     header("Location: ferramentas.php");
 }else{
 
-$result_add = "INSERT into apaga_status(motivo, responsavel, created) values ('$motivo','$responsavel', NOW())";
+$result = mysqli_query($conn,"SELECT empresa, ferramentas FROM contratos where id='$id'");
+while($row = mysqli_fetch_array($result)){
+$empresa = $row['empresa'];
+$ferramentas = $row['ferramentas'];
+}
+
+$result_add = "INSERT into apaga_status(motivo, empresa, ferramentas, responsavel, created)
+values ('$motivo','$empresa','$ferramentas','$responsavel', NOW())";
 $resultado = mysqli_query($conn, $result_add);
 
 $result = "DELETE FROM contratos where id='$id'";
