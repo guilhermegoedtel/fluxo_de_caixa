@@ -33,7 +33,6 @@ $id = $_GET['ID'];
                 <label>Motivo da exclusão:</label>
                 <textarea name="motivo" class="form-control" id="motivo" placeholder="Motivo da exclusão"></textarea>
             </div>
-            </div>
             <div class="form-group">
                 <label>Tem Certeza Que deseja Realmente excluir ?</label>
                 <select name="exclusao" class="form-control" id="exclusao">

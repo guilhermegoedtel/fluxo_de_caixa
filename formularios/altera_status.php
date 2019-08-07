@@ -93,6 +93,15 @@ $id = $_GET['ID'];
                 <option value="48 Meses">48 Meses</option>
                 </select>
             </div>
+              <div class="form-group">
+                <label>Data Inicial:</label>
+                <input type="date" name="data_inicial" class="form-control" id="data_inicial">
+              </div>
+              <div class="form-group">
+                <label>Data Final:</label>
+                <input type="date" name="data_final" class="form-control" id="data_final">
+              </div>
+            </div>
             <div class="modal-footer">
                 <a href="ferramentas.php"><button class="btn btn-secondary">Cancelar</button></a>
                 <?php $_SESSION['msg'] = "<p style='color:green;'>Alteração de status Cancelada !</p>"; ?>

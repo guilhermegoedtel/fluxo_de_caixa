@@ -166,8 +166,16 @@ echo $mensagem;
                 <option value="47 Meses">47 Meses</option>
                 <option value="48 Meses">48 Meses</option>
                 </select>
-            </div>
-        </div>
+              </div>
+              <div class="form-group">
+                <label>Data Inicial:</label>
+                <input type="date" name="data_inicial" class="form-control" id="data_inicial" required>
+              </div>
+              <div class="form-group">
+                <label>Data Final:</label>
+                <input type="date" name="data_final" class="form-control" id="data_final" required>
+              </div>
+          </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                 <input type="submit" name="status_ferramenta" id="status_ferramenta" value="Salvar" class="btn btn-primary">
