@@ -31,7 +31,7 @@ $id = $_GET['ID'];
             <input type="hidden" name="id" value="<?php echo $id; ?>">
             <div class="form-group">
                 <label>Motivo da exclusão:</label>
-                <textarea name="motivo" class="form-control" id="motivo" placeholder="Motivo da exclusão" required></textarea>
+                <textarea name="motivo" class="form-control" id="motivo" placeholder="Motivo da exclusão"></textarea>
             </div>
             </div>
             <div class="form-group">
@@ -42,8 +42,8 @@ $id = $_GET['ID'];
                 </select>
             </div>
             <div class="modal-footer">
-            <a href="ferramentas.php"><button class="btn btn-secondary">Cancelar</button></a>
-                <input type="submit" name="deleta_status" id="deleta_status" value="Deletar" class="btn btn-danger">
+              <a href="ferramentas.php"><button class="btn btn-secondary">Cancelar</button></a>
+              <input type="submit" name="deleta_status" id="deleta_status" value="Deletar" class="btn btn-danger">
             </div>
         </form>
     </div>
