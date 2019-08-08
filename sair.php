@@ -5,4 +5,5 @@
 		$_SESSION['nome'],
 		$_SESSION['lv_acesso'],
 		$_SESSION['email']);
+	header("Location: index.php");
 ?>

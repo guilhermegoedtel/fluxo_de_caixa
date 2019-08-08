@@ -58,7 +58,7 @@ $responsavel = $_SESSION['nome'];
             <button type="button" class="btn btn-info" data-toggle="modal" data-target="#propostas">Propostas</button>
             <button type="button" class="btn btn-info" onclick="location.href='videos.php'">Ver Videos apresentação</button>
             <button type="button" class="btn btn-info" onclick="location.href='formularios/ferramentas.php'">Gerenciar Ferramentas</button>
-            <button type="button" class="btn btn-info" onclick="location.href='formularios/empresas.php'">Comissão das vendas</button>
+            <button type="button" class="btn btn-info" onclick="location.href='formularios/comissao.php'">Comissão das vendas</button>
             <button type="button" class="btn btn-info" onclick="location.href='resumos/calendario_de_visitas.php'">Ver visitas agendadas</button>
             <button type="button" class="btn btn-info" data-toggle="modal" data-target="#visita">Cadastrar nova visita</button>
             <button type="button" class="btn btn-info" data-toggle="modal" data-target="#acompanhamento">Acompanhamento de visitas</button>
