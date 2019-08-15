@@ -14,7 +14,7 @@ $responsavel = $_SESSION['nome'];
 <body>
 <div id="page-content-wrapper">
     <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#comissao">Comissão das vendas</button>
+        <!--<button type="button" class="btn btn-info" data-toggle="modal" data-target="#comissao">Comissão das vendas</button>-->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
             <li class="nav-item">
@@ -37,29 +37,62 @@ $responsavel = $_SESSION['nome'];
       <th>E-RNC</th>
       <th>E-Tools</th>
       <th>iCalled</th>
-      <th>Período</th>
+      <th>Data Inicial</th>
+      <th>Data Final</th>
       <th>Valor total a receber</th>
     </tr>  
   </thead>
   <tbody>
+    <tr>
+      <td>Gestão Kaizen</td>
+      <td>100,00</td>
+      <td>100,00</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>100,00</td>
+      <td>100,00</td>
+      <td>-</td>
+      <td>100,00</td>
+      <td>2019-08-09</td>
+      <td>2020-08-09</td>
+      <td>50,00</td>
+    </tr>
+    <tr>
+      <td>SKF</td>
+      <td>100,00</td>
+      <td>100,00</td>
+      <td>100,00</td>
+      <td>100,00</td>
+      <td>100,00</td>
+      <td>100,00</td>
+      <td>100,00</td>
+      <td>100,00</td>
+      <td>100,00</td>
+      <td>2019-08-09</td>
+      <td>2020-08-09</td>
+      <td>90,00</td>
+    </tr>
+    <!--Teste Puxando do BD
     <?php
-    $result = mysqli_query($conn,"SELECT ID, status, empresa, ferramentas, periodo FROM contratos where responsavel='$responsavel'");
-    while($row = mysqli_fetch_array($result)){
+    //$result = mysqli_query($conn,"SELECT ID, status, empresa, ferramentas, periodo FROM contratos where responsavel='$responsavel'");
+    //while($row = mysqli_fetch_array($result)){
     ?>
     <tr>
-    <td><?php echo $row['ID']; ?></td>
-    <td><?php echo($row['status']);?></td>
-    <td><?php echo($row['empresa']);?></td>
-    <td><?php echo($row['ferramentas']);?></td>
-    <td><?php echo($row['periodo']);?></td>
+    <td><?php //echo $row['ID']; ?></td>
+    <td><?php //echo($row['status']);?></td>
+    <td><?php //echo($row['empresa']);?></td>
+    <td><?php //echo($row['ferramentas']);?></td>
+    <td><?php //echo($row['periodo']);?></td>
     <td>
-    <a href="altera_status.php?ID=<?php echo($row['ID']); ?>"><button class="btn btn-warning">Alterar</button></a>
-    <a href="deleta_status.php?ID=<?php echo($row['ID']); ?>"><button class="btn btn-danger">Excluir</button></a>
+    <a href="altera_status.php?ID=<?php //echo($row['ID']); ?>"><button class="btn btn-warning">Alterar</button></a>
+    <a href="deleta_status.php?ID=<?php //echo($row['ID']); ?>"><button class="btn btn-danger">Excluir</button></a>
     </td>
     </tr>
     <?php
-    }
+    //}
     ?> 
+  Fim do teste -->
   <tbody>
 </table>
 <div class="modal fade" id="comissao" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
