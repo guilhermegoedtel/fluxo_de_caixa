@@ -29,6 +29,8 @@ function mreais(v){
 <!--<link rel="stylesheet" type="text/css" href="assents/css/style.css" media="screen" />-->
 </head>
 <body>
+
+
 <div class="d-flex" id="wrapper">
     <div class="bg-light border-right" id="sidebar-wrapper">
         <div class="list-group list-group-flush">
@@ -40,7 +42,8 @@ function mreais(v){
             <button type="button" class="btn btn-info" onclick="location.href='formularios/add_usuario.php'">Cadastro de Usuários</button>
             <button type="button" class="btn btn-info" onclick="location.href='formularios/add_conta.php'">Adicionar Contas</button>
             <button type="button" class="btn btn-info" onclick="location.href='formularios/add_descricao_pagamento.php'">Descrição de Pagamento</button>
-            <button type="button" class="btn btn-warning" onclick="location.href='formularios/taxas_bancarias.php'">Taxas Bancarias</button>
+            <button type="button" class="btn btn-warning" onclick="location.href='formularios/taxas_bancaria.php'">Taxas Bancarias</button>
+            <button type="button" class="btn btn-info" onclick="location.href='formularios/historico_taxas_bancarias.php'">Histórico Taxas Bancarias</button>
         </div>
     </div>
 </div>
