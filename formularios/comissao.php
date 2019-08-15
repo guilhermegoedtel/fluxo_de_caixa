@@ -45,33 +45,33 @@ $responsavel = $_SESSION['nome'];
   <tbody>
     <tr>
       <td>Gestão Kaizen</td>
-      <td>100,00</td>
-      <td>100,00</td>
+      <td>R$: 100,00</td>
+      <td>R$: 100,00</td>
       <td>-</td>
       <td>-</td>
       <td>-</td>
-      <td>100,00</td>
-      <td>100,00</td>
+      <td>R$: 100,00</td>
+      <td>R$: 100,00</td>
       <td>-</td>
-      <td>100,00</td>
+      <td>R$: 100,00</td>
       <td>2019-08-09</td>
       <td>2020-08-09</td>
-      <td>50,00</td>
+      <td>R$: 50,00</td>
     </tr>
     <tr>
-      <td>SKF</td>
-      <td>100,00</td>
-      <td>100,00</td>
-      <td>100,00</td>
-      <td>100,00</td>
-      <td>100,00</td>
-      <td>100,00</td>
-      <td>100,00</td>
-      <td>100,00</td>
-      <td>100,00</td>
+      <td>Peles Pampa</td>
+      <td>R$: 100,00</td>
+      <td>R$: 100,00</td>
+      <td>R$: 100,00</td>
+      <td>R$: 100,00</td>
+      <td>R$: 100,00</td>
+      <td>R$: 100,00</td>
+      <td>R$: 100,00</td>
+      <td>R$: 100,00</td>
+      <td>R$: 100,00</td>
       <td>2019-08-09</td>
       <td>2020-08-09</td>
-      <td>90,00</td>
+      <td>R$: 90,00</td>
     </tr>
     <!--Teste Puxando do BD
     <?php

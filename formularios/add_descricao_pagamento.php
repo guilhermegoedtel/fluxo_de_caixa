@@ -17,7 +17,7 @@ include_once("conectar.php");
 <body>
 <div id="page-content-wrapper">
     <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#add_usuario">Adicionar Usuário</button>
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#add_descricao">Adicionar Descrição</button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
             <li class="nav-item">
@@ -30,61 +30,42 @@ include_once("conectar.php");
 <table class="table table-bordered">
   <thead>
     <tr>
-      <th>Nome</th>
-      <th>Email</th>
-      <th>Data e Hora de cadastro</th>
+      <th>Descrição</th>
     </tr>  
   </thead>
   <tbody>
 <?php
-$result_diario = "SELECT nome, login, created FROM usuario";
+$result_diario = "SELECT descricao FROM descricao_conta";
 $resultado_diario = mysqli_query($conn, $result_diario);
 while($row_diario = mysqli_fetch_assoc($resultado_diario)){
     ?>
     <tr>
-      <td><?php echo $row_diario['nome']; ?></td>
-      <td><?php echo $row_diario['login']; ?></td>
-      <td><?php echo $row_diario['created']; ?></td>
+      <td><?php echo $row_diario['descricao']; ?></td>
     </tr>
 <?php
 }
 ?>
 <tbody>
 </table>
-<div class="modal fade" id="add_usuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="add_descricao" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="add_usuarioLabel">Cadastrar empresa</h5>
+        <h5 class="modal-title" id="add_descricaoLabel">Cadastrar Descrição</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <form action="valida_usuario.php" method="POST">
+        <form action="valida_descricao_pagamento.php" method="POST">
             <div class="form-group">
-                <label>Email:</label>
-                <input type="email" name="login" id="login" class="form-control" placeholder="Digite o email">
-            </div>
-            <div class="form-group">
-                <label>Nome:</label>
-                <input type="text" name="nome" id="nome" class="form-control" placeholder="Digite o nome">
-            </div>
-            <div class="form-group">
-                <label>Senha:</label>
-                <input type="password" name="senha" id="senha" class="form-control" placeholder="Digite a Senha">
-            </div>
-            <div class="form-group">
-                <label>Nivel de Acesso:</label>
-                <select id="nv_acesso" name="nv_acesso" class="form-control">
-                  <option value="0" selected>Padrão</option> 
-                  <option value="1">Administrador</option>
-                </select>
+                <label>Descrição:</label>
+                <input type="text" name="descricao" id="descricao" class="form-control" placeholder="Digite a Descrição">
             </div>
         </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                <input type="submit" name="add_usuario" id="add_usuario" value="Salvar" class="btn btn-primary">
+                <input type="submit" name="add_descricao" id="add_descricao" value="Salvar" class="btn btn-primary">
             </div>
         </form>
     </div>

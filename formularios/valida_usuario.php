@@ -17,4 +17,6 @@ $senha = md5($senha);
 
 $result_usuario = "INSERT INTO usuario(login, nome, senha, nv_acesso, created)VALUES('$login', '$nome', '$senha', '$nv_acesso', NOW())";
 $resultado_usuario = mysqli_query($conn, $result_usuario);
+
+header('Location: add_descricao_pagamento.php');
 ?>

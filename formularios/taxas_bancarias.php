@@ -7,70 +7,27 @@ $responsavel = $_SESSION['nome'];
 <html>
 <head>
 <meta charset="utf-8">
-<script type="text/javascript"> 
-function mascara(o,f){
-	v_obj=o
-	v_fun=f
-	setTimeout("execmascara()",1)
-}
-function execmascara(){
-	v_obj.value=v_fun(v_obj.value)
-}
-function mreais(v){
-	v=v.replace(/\D/g,"")						//Remove tudo o que não é dígito
-	v=v.replace(/(\d{2})$/,",$1") 			//Coloca a virgula
-	v=v.replace(/(\d+)(\d{3},\d{2})$/g,"$1.$2") 	//Coloca o primeiro ponto
-	return v
-}
-</script>
-<link rel="stylesheet" type="text/css" href="assents/css/style.css" media="screen" />
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <link href="css/simple-sidebar.css" rel="stylesheet">
-<!--<link rel="stylesheet" type="text/css" href="assents/css/style.css" media="screen" />-->
 </head>
 <body>
-<div class="d-flex" id="wrapper">
-    <div class="bg-light border-right" id="sidebar-wrapper">
-        <div class="list-group list-group-flush">
-            <br>
-            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#add_dados">Adicionar dados</button><br>
-            <button type="button" class="btn btn-warning" onclick="location.href='resumos/ver_diario.php'">Resumo Diário</button>
-            <button type="button" class="btn btn-warning" onclick="location.href='resumos/ver_mensal.php'">Resumo Mensal</button><br>
-            <button type="button" class="btn btn-info" onclick="location.href='formularios/add_categoria.php'">Cadastro de Categoria</button>
-            <button type="button" class="btn btn-info" onclick="location.href='formularios/add_usuario.php'">Cadastro de Usuários</button>
-            <button type="button" class="btn btn-info" onclick="location.href='formularios/add_conta.php'">Adicionar Contas</button>
-            <button type="button" class="btn btn-info" onclick="location.href='formularios/add_descricao_pagamento.php'">Descrição de Pagamento</button>
-            <button type="button" class="btn btn-warning" onclick="location.href='formularios/taxas_bancarias.php'">Taxas Bancarias</button>
+<div id="page-content-wrapper">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#status_ferramenta">Adicionar Status</button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+            <button type="button" class="btn btn-info" onclick="location.href='../principal.php'">Voltar</button>
+            </li>
+          </ul>
         </div>
-    </div>
-</div>
-<!-- Antigo menu -->
-<!--
-<div id="tela">
-    <nav class="navigation">
-    <ul class="mainmenu">
-        <li><a href="">Resumos</a>
-            <ul class="submenu">
-                <li><a href="resumos/diario.php">Resumo diário</a></li>
-                <li><a href="resumos/mensal.php">Resumo mensal</a></li>
-            </ul>
-        </li>
-        <li><a href="">Adicionar dados</a>
-            <ul class="submenu">
-                <li><a href="formularios/inserir_dados.php">Inserir Dados</a></li>
-            </ul>
-        </li>
-        <li><a href="">Cadastros</a>
-        <ul class="submenu">
-            <li><a href="formularios/add_usuario.php">Usuário</a></li>
-            <li><a href="formularios/add_categoria.php">Categoria</a></li>
-        </ul>
-        </li>
-    </ul>
     </nav>
 </div>
--->
-
 <div class="modal fade" id="add_dados" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -194,6 +151,33 @@ function mreais(v){
     </div>
   </div>
 </div>
+
+<div class="modal fade" id="categoria" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="categoriaLabel">Cadastrar Categoria</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+        <div class="modal-body">
+        <form action="formularios/valida_categoria.php" method="POST">
+            <div class="form-group">
+                <label>Categoria:</label>
+                <input type="text" name="categoria" class="form-control" id="categoria">
+            </div>
+        </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <input type="submit" name="categoria" id="categoria" value="Salvar" class="btn btn-primary">
+            </div>
+        </form>
+    </div>
+  </div>
+</div>
+
+
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
