@@ -47,7 +47,7 @@ $responsavel = $_SESSION['nome'];
 </script>
 </head>
 <body>
-
+<!--
 <div class="d-flex" id="wrapper">
     <div class="bg-light border-right" id="sidebar-wrapper">
         <div class="list-group list-group-flush">
@@ -65,6 +65,7 @@ $responsavel = $_SESSION['nome'];
         </div>
     </div>
 </div>
+-->
 <div class="modal fade" id="add_empresa" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
