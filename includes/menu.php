@@ -126,6 +126,16 @@ function mreais(v){
           </li>
           <li class="dropdown">
             <a class="nav-link" href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="material-icons">trending_up</i>
+              <p>Entrada Ferramentas</p>
+            </a>
+            <div class="dropdown-menu">
+              <a href="formularios/entrada_ferramentas.php" class="dropdown-item">Entrada Ferramentas</a>
+              <a href="#" class="dropdown-item">Historico Entrada Ferramentas</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a class="nav-link" href="#" class="dropdown-toggle" data-toggle="dropdown">
               <i class="material-icons">create</i>
               <p>Cadastros</p>
             </a>
