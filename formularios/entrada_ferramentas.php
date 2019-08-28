@@ -162,7 +162,7 @@ while($row_diario = mysqli_fetch_assoc($resultado_diario)){
         $total = number_format($total/100,2,",",".");
       ?>
       <td><?php echo $total; ?></td>
-      <td><a href="pagar_taxa_imposto.php?ID=<?php echo($row_diario['ID']); ?>"><button class="btn btn-success">Pagar</button></a></td>
+      <td><a href="pagar_porcentagem_representante.php?ID=<?php echo $id; ?>"><button class="btn btn-success">Pagar</button></a></td>
     </tr>
 <?php
 }

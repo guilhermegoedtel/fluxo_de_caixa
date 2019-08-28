@@ -131,7 +131,16 @@ function mreais(v){
             </a>
             <div class="dropdown-menu">
               <a href="formularios/entrada_ferramentas.php" class="dropdown-item">Entrada Ferramentas</a>
-              <a href="#" class="dropdown-item">Historico Entrada Ferramentas</a>
+              <a href="formularios/historico_entrada_ferramentas.php" class="dropdown-item">Historico Entrada Ferramentas</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a class="nav-link" href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="material-icons">assignment_turned_in</i>
+              <p>Emissão NF</p>
+            </a>
+            <div class="dropdown-menu">
+              <a href="formularios/emissao_nf.php" class="dropdown-item">Emissão de NF</a>
             </div>
           </li>
           <li class="dropdown">
