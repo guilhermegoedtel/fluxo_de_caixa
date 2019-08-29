@@ -35,6 +35,7 @@ include_once("conectar.php");
       <th>Operação</th>
       <th>Conta</th>
       <th>Favorecido</th>
+      <th>CPF/CNPJ</th>
     </tr>  
   </thead>
   <tbody>
@@ -49,6 +50,7 @@ while($row_diario = mysqli_fetch_assoc($resultado_diario)){
       <td><?php echo $row_diario['operacao']; ?></td>
       <td><?php echo $row_diario['conta']; ?></td>
       <td><?php echo $row_diario['favorecido']; ?></td>
+      <td><?php echo $row_diario['cpf_cnpj']; ?></td>
     </tr>
 <?php
 }
@@ -96,6 +98,10 @@ while($row_diario = mysqli_fetch_assoc($resultado_diario)){
             <div class="form-group">
                 <label>Favorecido:</label>
                 <input type="text" name="favorecido" id="favorecido" class="form-control" placeholder="Digite o Favorecido">
+            </div>
+            <div class="form-group">
+                <label>CPF/CNPJ:</label>
+                <input type="text" name="cpf_cnpj" id="cpf_cnpj" class="form-control" placeholder="Digite o CPF/CNPJ do favorecido">
             </div>
         </div>
             <div class="modal-footer">

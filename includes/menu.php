@@ -55,7 +55,7 @@ function mreais(v){
             </a>
           </li>
           <li class="dropdown">
-            <a class="nav-link" href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <a class="nav-link" class="dropdown-toggle" data-toggle="dropdown">
               <i class="material-icons">calendar_today</i>
               <p>Resumos</p>
             </a>
@@ -65,95 +65,70 @@ function mreais(v){
             </div>
           </li>
           <li class="dropdown">
-            <a class="nav-link" href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="material-icons">account_balance</i>
-              <p>Taxas Bancarias</p>
-            </a>
-            <div class="dropdown-menu">
-              <a href="formularios/taxas_bancaria.php" class="nav-link dropdown-item">Taxas Bancarias</a>
-              <a href="formularios/historico_taxas_bancarias.php" class="dropdown-item">Histórico Taxas Bancarias</a>
-            </div>
-          </li>
-          <li class="dropdown">
-            <a class="nav-link" href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="material-icons">class</i>
-              <p>Impostos e Encargos</p>
-            </a>
-            <div class="dropdown-menu">
-              <a href="formularios/impostos_encargos.php" class="nav-link dropdown-item">Impostos e Encargos</a>
-              <a href="formularios/historico_impostos_encargos.php" class="dropdown-item">Histórico de Impostos e Encargos</a>
-            </div>
-          </li>
-          <li class="dropdown">
-            <a class="nav-link" href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="material-icons">trending_down</i>
-              <p>Despesas</p>
-            </a>
-            <div class="dropdown-menu">
-              <a href="formularios/despesas.php" class="dropdown-item">Despesas</a>
-              <a href="formularios/historico_despesas.php" class="dropdown-item">Historico Despesas</a>
-            </div>
-          </li>
-          <li class="dropdown">
-            <a class="nav-link" href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="material-icons">add_shopping_cart</i>
-              <p>Fornecedores</p>
-            </a>
-            <div class="dropdown-menu">
-              <a href="formularios/planejamento_fornecedor.php" class="dropdown-item">Fornecedor</a>
-              <a href="formularios/historico_fornecedor.php" class="dropdown-item">Historico Fornecedor</a>
-            </div>
-          </li>
-          <li class="dropdown">
-            <a class="nav-link" href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="material-icons">people</i>
-              <p>Funcionarios</p>
-            </a>
-            <div class="dropdown-menu">
-              <a href="formularios/funcionarios.php" class="dropdown-item">Funcionarios</a>
-              <a href="formularios/historico_funcionario.php" class="dropdown-item">Historico Funcionarios</a>
-            </div>
-          </li>
-          <li class="dropdown">
-            <a class="nav-link" href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="material-icons">account_box</i>
-              <p>Representantes</p>
-            </a>
-            <div class="dropdown-menu">
-              <a href="formularios/representantes.php" class="dropdown-item">Representantes</a>
-              <a href="formularios/historico_representantes.php" class="dropdown-item">Historico Representantes</a>
-            </div>
-          </li>
-          <li class="dropdown">
-            <a class="nav-link" href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <a class="nav-link" class="dropdown-toggle" data-toggle="dropdown">
               <i class="material-icons">trending_up</i>
               <p>Entrada Ferramentas</p>
             </a>
             <div class="dropdown-menu">
               <a href="formularios/entrada_ferramentas.php" class="dropdown-item">Entrada Ferramentas</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a class="nav-link" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="material-icons">trending_down</i>
+              <p>Saidas</p>
+            </a>
+            <div class="dropdown-menu">
+              <a href="formularios/taxas_bancaria.php" class="nav-link dropdown-item">Taxas Bancarias</a>
+              <a href="formularios/impostos_encargos.php" class="nav-link dropdown-item">Impostos e Encargos</a>
+              <a href="formularios/despesas.php" class="dropdown-item">Despesas</a>
+              <a href="formularios/planejamento_fornecedor.php" class="dropdown-item">Fornecedor</a>
+              <a href="formularios/funcionarios.php" class="dropdown-item">Funcionarios</a>
+              <a href="formularios/representantes.php" class="dropdown-item">Representantes</a>
+              <a href="formularios/historico_taxas_bancarias.php" class="dropdown-item">Histórico Taxas Bancarias</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a class="nav-link" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="material-icons">assignment_turned_in</i>
+              <p>Historico Entrada</p>
+            </a>
+            <div class="dropdown-menu">
               <a href="formularios/historico_entrada_ferramentas.php" class="dropdown-item">Historico Entrada Ferramentas</a>
             </div>
           </li>
           <li class="dropdown">
-            <a class="nav-link" href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="material-icons">assignment_turned_in</i>
-              <p>Emissão NF</p>
+            <a class="nav-link" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="material-icons">assignment_late</i>
+              <p>Historico Saida</p>
             </a>
             <div class="dropdown-menu">
-              <a href="formularios/emissao_nf.php" class="dropdown-item">Emissão de NF</a>
+            <a href="formularios/historico_despesas.php" class="dropdown-item">Historico Despesas</a>
+            <a href="formularios/historico_impostos_encargos.php" class="dropdown-item">Histórico de Impostos e Encargos</a>
+            <a href="formularios/historico_fornecedor.php" class="dropdown-item">Historico Fornecedor</a>
+            <a href="formularios/historico_funcionario.php" class="dropdown-item">Historico Funcionarios</a>
+            <a href="formularios/historico_representantes.php" class="dropdown-item">Historico Representantes</a>
             </div>
           </li>
           <li class="dropdown">
-            <a class="nav-link" href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <a class="nav-link" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="material-icons">book</i>
+              <p>Emissão NF</p>
+            </a>
+            <div class="dropdown-menu">
+              <a href="formularios/emissao_nf.php" class="dropdown-item">Gestão de NF</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a class="nav-link" class="dropdown-toggle" data-toggle="dropdown">
               <i class="material-icons">create</i>
               <p>Cadastros</p>
             </a>
             <div class="dropdown-menu">
               <a href="formularios/add_usuario.php" class="nav-link dropdown-item">Cadastro de Usuários</a>
-              <a href="formularios/add_descricao_pagamento.php" class="nav-link dropdown-item">Descrição de Pagamento</a>
+              <a href="formularios/add_descricao_pagamento.php" class="nav-link dropdown-item">Cadastro Taxa Bancaria</a>
               <a href="formularios/add_conta.php" class="dropdown-item">Adicionar Conta Bancaria</a>
-              <a href="formularios/add_categoria.php" class="dropdown-item">Adicionar Categoria</a>
-              <a href="formularios/add_descricao_impostos_encargos.php" class="nav-link dropdown-item">Descrição de Impostos e Encargos</a>
+              <a href="formularios/add_categoria.php" class="dropdown-item">Cadastro de despesa</a>
               <a href="formularios/add_impostos_encargos.php" class="dropdown-item">Adicionar Impostos e Encargos</a>
               <a href="formularios/add_equipe.php" class="nav-link dropdown-item">Colaboradores</a>
               <a href="formularios/add_fornecedor.php" class="nav-link dropdown-item">Adicionar Fornecedor</a>

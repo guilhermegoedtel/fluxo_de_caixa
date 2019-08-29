@@ -88,14 +88,15 @@ function mreais(v){
       <th>Representante</th>
       <th>%</th>
       <th>E-5s</th>
-      <th>E-Auditorias</th>
+      <th>Auditorias</th>
       <th>VDA</th>
-      <th>E-Assitec</th>
-      <th>E-Projetos</th>
-      <th>E-Connect</th>
-      <th>E-Tools</th>
+      <th>Assitec</th>
+      <th>Projetos</th>
+      <th>Connect</th>
+      <th>Tools</th>
       <th>iCalled</th>
       <th>% Pagar</th>
+      <th>Receber</th>
       <th>Ações</th>
     </tr>  
   </thead>
@@ -158,10 +159,13 @@ while($row_diario = mysqli_fetch_assoc($resultado_diario)){
             $icalled = 0;
         }
         $total = ($fives + $auditorias + $vda + $assitec + $projetos + $connect + $tools + $icalled);
-        $total = (($total * $porcentagem)/100);
-        $total = number_format($total/100,2,",",".");
+        $total_por = (($total * $porcentagem)/100);
+        $total_por_exibir = number_format($total_por/100,2,",",".");
+        $total_receber = ($total - $total_por);
+        $total_receber = number_format($total_receber/100,2,",",".");
       ?>
-      <td><?php echo $total; ?></td>
+      <td><?php echo $total_por_exibir; ?></td>
+      <td><?php echo $total_receber; ?></td>
       <td><a href="pagar_porcentagem_representante.php?ID=<?php echo $id; ?>"><button class="btn btn-success">Pagar</button></a></td>
     </tr>
 <?php
@@ -247,6 +251,10 @@ while($row_diario = mysqli_fetch_assoc($resultado_diario)){
             <div class="form-group">
                 <label>E-Connect:</label>
                 <input type="text" name="connect" class="form-control" id="connect" onkeypress="mascara(this,mreais)" size="20" />
+            </div>
+            <div class="form-group">
+                <label>E-Tools:</label>
+                <input type="text" name="tools" class="form-control" id="tools" onkeypress="mascara(this,mreais)" size="20" />
             </div>
             <div class="form-group">
                 <label>Icalled:</label>

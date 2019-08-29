@@ -31,16 +31,18 @@ include_once("conectar.php");
   <thead>
     <tr>
       <th>Impostos/Encargos</th>
+      <th>Descrição</th>
     </tr>  
   </thead>
   <tbody>
 <?php
-$result_diario = "SELECT impostos_encargos FROM add_impostos_encargos";
+$result_diario = "SELECT impostos_encargos,descricao FROM add_impostos_encargos";
 $resultado_diario = mysqli_query($conn, $result_diario);
 while($row_diario = mysqli_fetch_assoc($resultado_diario)){
     ?>
     <tr>
       <td><?php echo $row_diario['impostos_encargos']; ?></td>
+      <td><?php echo $row_diario['descricao']; ?></td>
     </tr>
 <?php
 }
@@ -61,6 +63,10 @@ while($row_diario = mysqli_fetch_assoc($resultado_diario)){
             <div class="form-group">
                 <label>Imposto/Encargo:</label>
                 <input type="text" name="impostos_encargos" id="impostos_encargos" class="form-control" placeholder="Digite o Imposto/Encargo">
+            </div>
+            <div class="form-group">
+                <label>Descrição:</label>
+                <input type="text" name="descricao" id="descricao" class="form-control" placeholder="Digite a descricao de Imposto/Encargo">
             </div>
         </div>
             <div class="modal-footer">
