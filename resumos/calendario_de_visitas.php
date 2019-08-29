@@ -77,7 +77,7 @@ $resultado_events = mysqli_query($conn, $result_events);
           </ul>
         </div>
     </nav>
-</div> 
+</div>
 
 <div id='calendar'></div>
 

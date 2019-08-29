@@ -55,9 +55,9 @@ $responsavel = $_SESSION['nome'];
 <div class="wrapper ">
     <div class="sidebar" data-color="green" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
       <div class="logo">
-        <a href="#" class="simple-text logo-normal">
+        <center><button type="button" class="btn btn-success"><a href="#" class="simple-text logo-normal" style="color:white">
           Olá, <?php echo $responsavel;?>
-        </a>
+        </a></button></center>
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
@@ -67,74 +67,65 @@ $responsavel = $_SESSION['nome'];
               <p>Empresas</p>
             </a>
             <div class="dropdown-menu">
+              <a href="formularios/add_empresa.php" class="dropdown-item">Adicionar Empresa</a>
               <a href="formularios/empresas_pessoal.php" class="nav-link dropdown-item">Ver empresas cadastradas</a>
               <a href="formularios/todas_empresas.php" class="dropdown-item">Ver empresas já cadastradas</a>
             </div>
           </li>
           <li class="dropdown">
             <a class="nav-link" href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="material-icons">account_balance</i>
-              <p>Taxas Bancarias</p>
+              <i class="material-icons">calendar_today</i>
+              <p>Videos</p>
             </a>
             <div class="dropdown-menu">
-              <a href="formularios/taxas_bancaria.php" class="nav-link dropdown-item">Taxas Bancarias</a>
-              <a href="formularios/historico_taxas_bancarias.php" class="dropdown-item">Histórico Taxas Bancarias</a>
+              <a href="videos.php" class="nav-link dropdown-item">Videos para apresentação</a>
             </div>
           </li>
           <li class="dropdown">
             <a class="nav-link" href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="material-icons">class</i>
-              <p>Impostos e Encargos</p>
+              <i class="material-icons">calendar_today</i>
+              <p>Videos</p>
             </a>
             <div class="dropdown-menu">
-              <a href="formularios/impostos_encargos.php" class="nav-link dropdown-item">Impostos e Encargos</a>
-              <a href="formularios/historico_impostos_encargos.php" class="dropdown-item">Histórico de Impostos e Encargos</a>
+              <a href="videos.php" class="nav-link dropdown-item">Videos para apresentação</a>
             </div>
           </li>
           <li class="dropdown">
             <a class="nav-link" href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="material-icons">trending_down</i>
-              <p>Despesas</p>
+              <i class="material-icons">calendar_today</i>
+              <p>Ferramentas</p>
             </a>
             <div class="dropdown-menu">
-              <a href="formularios/despesas.php" class="dropdown-item">Despesas</a>
-              <a href="formularios/historico_despesas.php" class="dropdown-item">Historico Despesas</a>
+              <a href="formularios/ferramentas.php" class="nav-link dropdown-item">Gerenciar Ferramentas</a>
             </div>
           </li>
           <li class="dropdown">
             <a class="nav-link" href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="material-icons">add_shopping_cart</i>
-              <p>Fornecedores</p>
+              <i class="material-icons">calendar_today</i>
+              <p>Comissão</p>
             </a>
             <div class="dropdown-menu">
-              <a href="formularios/planejamento_fornecedor.php" class="dropdown-item">Fornecedor</a>
-              <a href="formularios/historico_fornecedor.php" class="dropdown-item">Historico Fornecedor</a>
+              <a href="formularios/comissao.php" class="nav-link dropdown-item">Comissão de vendas</a>
             </div>
           </li>
           <li class="dropdown">
             <a class="nav-link" href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="material-icons">people</i>
-              <p>Funcionarios</p>
+              <i class="material-icons">calendar_today</i>
+              <p>Visitas</p>
             </a>
             <div class="dropdown-menu">
-              <a href="formularios/funcionarios.php" class="dropdown-item">Funcionarios</a>
-              <a href="formularios/historico_funcionario.php" class="dropdown-item">Historico Funcionariosss</a>
+              <a href="resumos/calendario_de_visitas.php" class="nav-link dropdown-item">Calendario de Visitas</a>
+              <a href="formularios/add_visita.php" class="nav-link dropdown-item">Cadastrar nova Visita</a>
+              <a href="formularios/acompanha_visita.php" class="nav-link dropdown-item">Acompanhamento de visitas</a>
             </div>
           </li>
           <li class="dropdown">
             <a class="nav-link" href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="material-icons">create</i>
-              <p>Cadastros</p>
+              <i class="material-icons">calendar_today</i>
+              <p>Propostas</p>
             </a>
             <div class="dropdown-menu">
-              <a href="formularios/add_usuario.php" class="nav-link dropdown-item">Cadastro de Usuários</a>
-              <a href="formularios/add_descricao_pagamento.php" class="nav-link dropdown-item">Descrição de Pagamento</a>
-              <a href="formularios/add_conta.php" class="dropdown-item">Adicionar Conta Bancaria</a>
-              <a href="formularios/add_categoria.php" class="dropdown-item">Adicionar Categoria</a>
-              <a href="formularios/add_descricao_impostos_encargos.php" class="nav-link dropdown-item">Descrição de Impostos e Encargos</a>
-              <a href="formularios/add_impostos_encargos.php" class="dropdown-item">Adicionar Impostos e Encargos</a>
-              <a href="formularios/add_equipe.php" class="nav-link dropdown-item">Colaboradores</a>
-              <a href="formularios/add_fornecedor.php" class="nav-link dropdown-item">Adicionar Fornecedor</a>
+              <a href="formularios/propostas.php" class="nav-link dropdown-item">Salvar Proposta</a>
             </div>
           </li>
         </ul>
@@ -175,16 +166,17 @@ $responsavel = $_SESSION['nome'];
             ..<button type="button" class="btn btn-warning" onclick="location.href='formularios/empresas_pessoal.php'">Ver empresas cadastradas</button>
             ..<button type="button" class="btn btn-warning" onclick="location.href='formularios/todas_empresas.php'">Ver empresas já cadastradas</button><br>
             <button type="button" class="btn btn-info" data-toggle="modal" data-target="#propostas">Propostas</button>
-            <button type="button" class="btn btn-info" onclick="location.href='videos.php'">Ver Videos apresentação</button>
-            <button type="button" class="btn btn-info" onclick="location.href='formularios/ferramentas.php'">Gerenciar Ferramentas</button>
-            <button type="button" class="btn btn-info" onclick="location.href='formularios/comissao.php'">Comissão das vendas</button>
-            <button type="button" class="btn btn-info" onclick="location.href='resumos/calendario_de_visitas.php'">Ver visitas agendadas</button>
-            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#visita">Cadastrar nova visita</button>
-            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#acompanhamento">Acompanhamento de visitas</button>
+            ..<button type="button" class="btn btn-info" onclick="location.href='videos.php'">Ver Videos apresentação</button>
+            ..<button type="button" class="btn btn-info" onclick="location.href='formularios/ferramentas.php'">Gerenciar Ferramentas</button>
+            ..<button type="button" class="btn btn-info" onclick="location.href='formularios/comissao.php'">Comissão das vendas</button>
+            ..<button type="button" class="btn btn-info" onclick="location.href='resumos/calendario_de_visitas.php'">Ver visitas agendadas</button>
+            ..<button type="button" class="btn btn-info" data-toggle="modal" data-target="#visita">Cadastrar nova visita</button>
+            ..<button type="button" class="btn btn-info" data-toggle="modal" data-target="#acompanhamento">Acompanhamento de visitas</button>
         </div>
     </div>
 </div>
 Fim velho-->
+<!--
 <div class="modal fade" id="add_empresa" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -299,7 +291,8 @@ Fim velho-->
     </div>
   </div>
 </div>
-
+-->
+<!--
 <div class="modal fade" id="acompanhamento" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -311,22 +304,22 @@ Fim velho-->
       </div>
       <div class="modal-body">
         <form action="formularios/valida_acompanhamento.php" method="POST">
-         <!--enctype="multipart/form-data"-->
+         enctype="multipart/form-data"
             <div class="form-group">
                 <label>Responsavel:</label>
-                <input type="text" name="responsavel" class="form-control" id="razao_social" value="<?php echo $responsavel; ?>" disabled="disabled" required>
+                <input type="text" name="responsavel" class="form-control" id="razao_social" value="<?php //echo $responsavel; ?>" disabled="disabled" required>
             </div>
             <div class="form-group">
                 <label>Empresa:</label>
                 <select name="empresa" class="form-control" id="empresa">
                     <option value="" selected>Selecione uma empresa</option>
                     <?php
-                    $result = mysqli_query($conn,"SELECT nome_fantasia FROM cadastrar_empresa where responsavel='$responsavel'");
-                    while($row = mysqli_fetch_array($result)){
+                    //$result = mysqli_query($conn,"SELECT nome_fantasia FROM cadastrar_empresa where responsavel='$responsavel'");
+                    //while($row = mysqli_fetch_array($result)){
                     ?>
-                    <option value ="<?php echo($row['nome_fantasia']);?>"><?php echo($row['nome_fantasia']);?></option>
+                    <option value ="<?php //echo($row['nome_fantasia']);?>"><?php //echo($row['nome_fantasia']);?></option>
                     <?php
-                    }
+                    //}
                     ?> 
                 </select>
             </div>
@@ -344,6 +337,9 @@ Fim velho-->
   </div>
 </div>
 
+-->
+<!--
+
 <div class="modal fade" id="visita" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -355,22 +351,22 @@ Fim velho-->
       </div>
       <div class="modal-body">
         <form action="formularios/valida_visita.php" method="POST">
-         <!--enctype="multipart/form-data"-->
+         enctype="multipart/form-data"
             <div class="form-group">
                 <label>Responsavel:</label>
-                <input type="text" name="responsavel" class="form-control" id="razao_social" value="<?php echo $responsavel; ?>" disabled="disabled" required>
+                <input type="text" name="responsavel" class="form-control" id="razao_social" value="<?php //echo $responsavel; ?>" disabled="disabled" required>
             </div>
             <div class="form-group">
                 <label>Empresa:</label>
                 <select name="empresa" class="form-control" id="empresa">
                     <option value="" selected>Selecione uma empresa</option>
                     <?php
-                    $result = mysqli_query($conn,"SELECT nome_fantasia FROM cadastrar_empresa where responsavel='$responsavel'");
-                    while($row = mysqli_fetch_array($result)){
+                    //$result = mysqli_query($conn,"SELECT nome_fantasia FROM cadastrar_empresa where responsavel='$responsavel'");
+                    //while($row = mysqli_fetch_array($result)){
                     ?>
-                    <option value ="<?php echo($row['nome_fantasia']);?>"><?php echo($row['nome_fantasia']);?></option>
+                    <option value ="<?php //echo($row['nome_fantasia']);?>"><?php //echo($row['nome_fantasia']);?></option>
                     <?php
-                    }
+                    //}
                     ?> 
                 </select>
             </div>
@@ -392,6 +388,9 @@ Fim velho-->
   </div>
 </div>
 
+-->
+<!--
+
 <div class="modal fade" id="propostas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -405,19 +404,19 @@ Fim velho-->
         <form action="formularios/valida_proposta.php" method="POST" enctype="multipart/form-data">
             <div class="form-group">
                 <label>Responsavel:</label>
-                <input type="text" name="responsavel" class="form-control" id="razao_social" value="<?php echo $responsavel; ?>" disabled="disabled" required>
+                <input type="text" name="responsavel" class="form-control" id="razao_social" value="<?php //echo $responsavel; ?>" disabled="disabled" required>
             </div>
             <div class="form-group">
                 <label>Empresa:</label>
                 <select name="empresa" class="form-control" id="empresa">
                     <option value="" selected>Selecione uma empresa</option>
                     <?php
-                    $result = mysqli_query($conn,"SELECT nome_fantasia FROM cadastrar_empresa where responsavel='$responsavel'");
-                    while($row = mysqli_fetch_array($result)){
+                    //$result = mysqli_query($conn,"SELECT nome_fantasia FROM cadastrar_empresa where responsavel='$responsavel'");
+                    //while($row = mysqli_fetch_array($result)){
                     ?>
-                    <option value ="<?php echo($row['nome_fantasia']);?>"><?php echo($row['nome_fantasia']);?></option>
+                    <option value ="<?php //echo($row['nome_fantasia']);?>"><?php //echo($row['nome_fantasia']);?></option>
                     <?php
-                    }
+                    //}
                     ?> 
                 </select>
             </div>
@@ -434,7 +433,7 @@ Fim velho-->
     </div>
   </div>
 </div>
-
+-->
 <!--   Core JS Files   -->
 <script src="../assets/js/core/jquery.min.js"></script>
   <script src="../assets/js/core/popper.min.js"></script>
