@@ -85,7 +85,6 @@ function mreais(v){
               <a href="formularios/planejamento_fornecedor.php" class="dropdown-item">Fornecedor</a>
               <a href="formularios/funcionarios.php" class="dropdown-item">Funcionarios</a>
               <a href="formularios/representantes.php" class="dropdown-item">Representantes</a>
-              <a href="formularios/historico_taxas_bancarias.php" class="dropdown-item">Histórico Taxas Bancarias</a>
             </div>
           </li>
           <li class="dropdown">
@@ -108,6 +107,7 @@ function mreais(v){
             <a href="formularios/historico_fornecedor.php" class="dropdown-item">Historico Fornecedor</a>
             <a href="formularios/historico_funcionario.php" class="dropdown-item">Historico Funcionarios</a>
             <a href="formularios/historico_representantes.php" class="dropdown-item">Historico Representantes</a>
+            <a href="formularios/historico_taxas_bancarias.php" class="dropdown-item">Histórico Taxas Bancarias</a>
             </div>
           </li>
           <li class="dropdown">
@@ -132,7 +132,7 @@ function mreais(v){
               <a href="formularios/add_impostos_encargos.php" class="dropdown-item">Adicionar Impostos e Encargos</a>
               <a href="formularios/add_equipe.php" class="nav-link dropdown-item">Colaboradores</a>
               <a href="formularios/add_fornecedor.php" class="nav-link dropdown-item">Adicionar Fornecedor</a>
-              <a href="formularios/add_representantes.php" class="nav-link dropdown-item">Adicionar Representantes</a>
+              <a href="formularios/add_representante.php" class="nav-link dropdown-item">Adicionar Representantes</a>
             </div>
           </li>
         </ul>
