@@ -71,6 +71,7 @@ function mreais(v){
             </a>
             <div class="dropdown-menu">
               <a href="formularios/entrada_ferramentas.php" class="dropdown-item">Entrada Ferramentas</a>
+              <a href="formularios/entrada_customizacao.php" class="dropdown-item">Entrada Customizações</a>
             </div>
           </li>
           <li class="dropdown">
@@ -94,6 +95,7 @@ function mreais(v){
             </a>
             <div class="dropdown-menu">
               <a href="formularios/historico_entrada_ferramentas.php" class="dropdown-item">Historico Entrada Ferramentas</a>
+              <a href="formularios/historico_customizacao.php" class="dropdown-item">Historico Entrada Customizações</a>
             </div>
           </li>
           <li class="dropdown">

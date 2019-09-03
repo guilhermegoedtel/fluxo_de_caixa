@@ -30,36 +30,19 @@ include_once("conectar.php");
 <table class="table table-bordered">
   <thead>
     <tr>
-      <th>Registro</th>
       <th>Colaborador</th>
       <th>Função</th>
-      <th>Endereço</th>
-      <th>Número</th>
-      <th>Complemento</th>
-      <th>Bairro</th>
-      <th>Cidade</th>
-      <th>CNH</th>
-      <th>Foto</th>
     </tr>  
   </thead>
   <tbody>
 <?php
-$result_diario = "SELECT * FROM equipe";
+$result_diario = "SELECT equipe, funcao FROM equipe";
 $resultado_diario = mysqli_query($conn, $result_diario);
 while($row_diario = mysqli_fetch_assoc($resultado_diario)){
     ?>
     <tr>
-      <?php $ID = $row_diario['ID']; ?>
-      <td><?php echo $row_diario['registro']; ?></td>
       <td><?php echo $row_diario['equipe']; ?></td>
       <td><?php echo $row_diario['funcao']; ?></td>
-      <td><?php echo $row_diario['endereco']; ?></td>
-      <td><?php echo $row_diario['numero']; ?></td>
-      <td><?php echo $row_diario['complemento']; ?></td>
-      <td><?php echo $row_diario['bairro']; ?></td>
-      <td><?php echo $row_diario['cidade']; ?></td>
-      <td><?php echo $row_diario['cnh']; ?></td>
-      <td><a href="foto_colaborador.php?ID=<?php echo $ID; ?>"><img src="../images/anexo.png" width="64" height="64"></a></td>
     </tr>
 <?php
 }
@@ -76,14 +59,7 @@ while($row_diario = mysqli_fetch_assoc($resultado_diario)){
         </button>
       </div>
       <div class="modal-body">
-        <form action="valida_equipe.php" method="POST" enctype="multipart/form-data">
-            <div class="form-group">
-                <input type="hidden" name="ID" class="form-control" value="<?php echo $ID; ?>">
-            </div>
-            <div class="form-group">
-                <label>N. Registro:</label>
-                <input type="text" name="registro" class="form-control" placeholder="Digite o número de registro">
-            </div>
+        <form action="valida_equipe.php" method="POST">
             <div class="form-group">
                 <label>Colaborador:</label>
                 <input type="text" name="equipe" class="form-control" placeholder="Digite o nome do colaborador">
@@ -91,46 +67,6 @@ while($row_diario = mysqli_fetch_assoc($resultado_diario)){
             <div class="form-group">
                 <label>Função:</label>
                 <input type="text" name="funcao" class="form-control" placeholder="Digite a Função">
-            </div>
-            <div class="form-group">
-                <label>Endereço:</label>
-                <input type="text" name="endereco" class="form-control" placeholder="Digite o endereço">
-            </div>
-            <div class="form-group">
-                <label>Número:</label>
-                <input type="number" name="numero" class="form-control" placeholder="Digite o numero">
-            </div>
-            <div class="form-group">
-                <label>Complemento:</label>
-                <input type="text" name="complemento" class="form-control" placeholder="Digite o complemento">
-            </div>
-            <div class="form-group">
-                <label>Bairro:</label>
-                <input type="text" name="bairro" class="form-control" placeholder="Digite o Bairro">
-            </div>
-            <div class="form-group">
-                <label>Cidade:</label>
-                <input type="text" name="cidade" class="form-control" placeholder="Digite a cidade">
-            </div>
-            <div class="form-group">
-                <label>CNH:</label>
-                <select name="cnh" class="form-control">
-                <option class="form-control" value="">Selecione</option>
-                <option class="form-control" value="N/A">N/A</option>
-                <option class="form-control" value="A">A</option>
-                <option class="form-control" value="B">B</option>
-                <option class="form-control" value="C">C</option>
-                <option class="form-control" value="D">D</option>
-                <option class="form-control" value="E">E</option>
-                <option class="form-control" value="A/B">A/B</option>
-                <option class="form-control" value="A/C">A/C</option>
-                <option class="form-control" value="A/D">A/D</option>
-                <option class="form-control" value="N/A">A/E</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label>Foto 3x4:</label>
-                <input type="file" name="foto" class="form-control">
             </div>
         </div>
             <div class="modal-footer">

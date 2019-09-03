@@ -111,10 +111,10 @@ function mreais(v){
                 <select name="descricao_impostos_encargos" class="form-control" id="descricao_impostos_encargos">
                     <option value="" selected>Selecione uma descrição do Imposto/Encargo</option>
                     <?php
-                    $result = mysqli_query($conn,"SELECT descricao FROM add_impostos_encargos");
+                    $result = mysqli_query($conn,"SELECT descricao_impostos_encargos FROM descricao_impostos_encargos");
                     while($row = mysqli_fetch_array($result)){
                     ?>
-                    <option value ="<?php echo($row['descricao']);?>"><?php echo($row['descricao']);?></option>
+                    <option value ="<?php echo($row['descricao_impostos_encargos']);?>"><?php echo($row['descricao_impostos_encargos']);?></option>
                     <?php
                     }
                     ?> 

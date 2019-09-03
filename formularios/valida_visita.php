@@ -16,7 +16,7 @@ if($lv_acesso == 1){
     header('Location: ../principal.php');
     exit();
 }else{
-    header('Location: ../resumos/calendario_de_visitas.php');
+    header('Location: ../principal_representantes.php');
     exit();
 }
 ?>

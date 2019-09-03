@@ -77,7 +77,7 @@ while($row_diario = mysqli_fetch_assoc($resultado_diario)){
             <div class="form-group">
                 <label>Nivel de Acesso:</label>
                 <select id="nv_acesso" name="nv_acesso" class="form-control">
-                  <option value="0" selected>Usuário</option> 
+                  <option value="0" selected>Padrão</option> 
                   <option value="1">Administrador</option>
                 </select>
             </div>

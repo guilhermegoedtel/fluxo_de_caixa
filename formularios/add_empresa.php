@@ -6,6 +6,7 @@ include_once("conectar.php");
 <!Doctype html>
 <head>
 <meta charset="utf-8">
+<!--Script's para mascaras-->
 <script type="text/javascript">
 	function fMasc(objeto,mascara) {
 		obj=objeto
@@ -41,154 +42,59 @@ include_once("conectar.php");
 		return cnpj
 	}
 </script>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<link href="css/simple-sidebar.css" rel="stylesheet">
+<!--Fim Script's para mascaras-->
 </head>
 <body>
-<div id="page-content-wrapper">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-            <li class="nav-item">
-            <button type="button" class="btn btn-info" onclick="location.href='../principal_representantes.php'">Voltar</button>
-            </li>
-          </ul>
-        </div>
-    </nav>
-</div>
-<div class="modal fade" id="add_empresa" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="add_empresaLabel">Cadastrar empresa</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form action="../includes/valida_empresa.php" method="POST" enctype="multipart/form-data">
-            <div class="form-group">
-                <label>Razão Social:</label>
-                <input type="text" name="razao_social" class="form-control" id="razao_social" placeholder="Razão Social" required>
-            </div>
-            <div class="form-group">
-                <label>Nome Fantasia:</label>
-                <input type="text" name="nome_fantasia" class="form-control" id="nome_fantasia" placeholder="Nome Fantasia" required>
-            </div>
-            <div class="form-group">
-                <label>CNPJ:</label>
-                <input type="text" name="cnpj" class="form-control" id="cnpj" placeholder="CNPJ" onkeydown="javascript: fMasc( this, mCNPJ );" required>
-            </div>
-            <div class="form-group">
-                <label>Logotipo:</label>
-                <input type="file" name="logotipo" class="form-control" id="logotipo" placeholder="Logotipo" required>
-            </div>
-            <div class="form-group">
-                <label>Endereço:</label>
-                <input type="text" name="endereco" class="form-control" id="endereco" placeholder="Endereço" required>
-            </div>
-            <div class="form-group">
-                <label>Número:</label>
-                <input type="number" name="numero" class="form-control" id="numero" placeholder="Número" pattern="[0-9]+" required>
-            </div>
-            <div class="form-group">
-                <label>Complemento:</label>
-                <input type="text" name="complemento" class="form-control" id="complemento" placeholder="Complemento">
-            </div>
-            <div class="form-group">
-                <label>Bairro:</label>
-                <input type="text" name="bairro" class="form-control" id="bairro" placeholder="Bairro" required>
-            </div>
-            <div class="form-group">
-                <label>Estado:</label>
-                <select id="estado" name="estado" class="form-control">
-                    <option value="" checked>Selecione um estado</option>
-                    <option value="AC">Acre</option>
-                    <option value="AL">Alagoas</option>
-                    <option value="AP">Amapá</option>
-                    <option value="AM">Amazonas</option>
-                    <option value="BA">Bahia</option>
-                    <option value="CE">Ceará</option>
-                    <option value="DF">Distrito Federal</option>
-                    <option value="ES">Espírito Santo</option>
-                    <option value="GO">Goiás</option>
-                    <option value="MA">Maranhão</option>
-                    <option value="MT">Mato Grosso</option>
-                    <option value="MS">Mato Grosso do Sul</option>
-                    <option value="MG">Minas Gerais</option>
-                    <option value="PA">Pará</option>
-                    <option value="PB">Paraíba</option>
-                    <option value="PR">Paraná</option>
-                    <option value="PE">Pernambuco</option>
-                    <option value="PI">Piauí</option>
-                    <option value="RJ">Rio de Janeiro</option>
-                    <option value="RN">Rio Grande do Norte</option>
-                    <option value="RS">Rio Grande do Sul</option>
-                    <option value="RO">Rondônia</option>
-                    <option value="RR">Roraima</option>
-                    <option value="SC">Santa Catarina</option>
-                    <option value="SP">São Paulo</option>
-                    <option value="SE">Sergipe</option>
-                    <option value="TO">Tocantins</option>
-                    <option value="EX">Estrangeiro</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label>Cidade:</label>
-                <input type="text" name="cidade" class="form-control" id="cidade" placeholder="Cidade" required>
-            </div>
-			<div class="form-group">
-                <label>Responsavel:</label>
-                <select name="responsavel" class="form-control" id="responsavel">
-                    <option value="" selected>Selecione um responsavel</option>
-                    <?php
-                    $result = mysqli_query($conn,"SELECT responsavel FROM representante");
-                    while($row = mysqli_fetch_array($result)){
-                    ?>
-                    <option value ="<?php echo($row['responsavel']);?>"><?php echo($row['responsavel']);?></option>
-                    <?php
-                    }
-                    ?> 
-                </select>
-            </div>
-            <div class="form-group">
-                <label>Telefone Fixo:</label>
-                <input type="text" name="telefone" class="form-control" id="telefone" placeholder="Telefone Fixo" onkeydown="javascript: fMasc( this, mTel );" required>
-            </div>
-            <div class="form-group">
-                <label>Celular:</label>
-                <input type="text" name="celular" class="form-control" id="celular" placeholder="Celular" onkeydown="javascript: fMasc( this, mTel );" required>
-            </div>
-            <div class="form-group">
-                <label>Email:</label>
-                <input type="email" name="email" class="form-control" id="email" placeholder="Email" required>
-            </div>
-            <div class="form-group">
-                <label>Latitude:</label>
-                <input type="number" name="latitude" class="form-control" id="latitude" placeholder="Latitude" required>
-            </div>
-            <div class="form-group">
-                <label>Longitude:</label>
-                <input type="number" name="longitude" class="form-control" id="longitude" placeholder="Longitude" required>
-            </div>
-        </div>
-            <div class="modal-footer">
-				<a href="../principal_representantes.php"><button type="button" class="btn btn-secondary">Cancelar</button></a>
-                <input type="submit" name="add_empresa" id="add_empresa" value="Salvar" class="btn btn-primary">
-            </div>
-        </form>
-    </div>
-  </div>
-</div>
+<form action="valida_empresa.php" method="POST">
+<lable>Razão Social:   </lable><input type="razao_social" name="razao_social" placeholder="Razão Social" required>
+<lable>Nome Fantasia:  </lable><input type="nome_fantasia" name="nome_fantasia" placeholder="Nome Fantasia" required>
+<lable>CNPJ:           </lable><input type="text" name="cnpj" placeholder="CNPJ" onkeydown="javascript: fMasc( this, mCNPJ );" required>
+<lable>Logotipo:       </lable><input type="file" name="logotipo" placeholder="Logotipo" required>
+<lable>Endereço:       </lable><input type="text" name="endereco" placeholder="Endereço" required>
+<lable>Número:         </lable><input type="number" name="numero" placeholder="Número" pattern="[0-9]+" required>
+<lable>Complemento:    </lable><input type="text" name="complemento" placeholder="Complemento">
+<lable>Bairro:         </lable><input type="text" name="bairro" placeholder="Bairro" required>
+<lable>Estado:         </lable>
+<select id="estado" name="estado">
+    <option value="">Selecione um estado</option>
+    <option value="AC">Acre</option>
+    <option value="AL">Alagoas</option>
+    <option value="AP">Amapá</option>
+    <option value="AM">Amazonas</option>
+    <option value="BA">Bahia</option>
+    <option value="CE">Ceará</option>
+    <option value="DF">Distrito Federal</option>
+    <option value="ES">Espírito Santo</option>
+    <option value="GO">Goiás</option>
+    <option value="MA">Maranhão</option>
+    <option value="MT">Mato Grosso</option>
+    <option value="MS">Mato Grosso do Sul</option>
+    <option value="MG">Minas Gerais</option>
+    <option value="PA">Pará</option>
+    <option value="PB">Paraíba</option>
+    <option value="PR">Paraná</option>
+    <option value="PE">Pernambuco</option>
+    <option value="PI">Piauí</option>
+    <option value="RJ">Rio de Janeiro</option>
+    <option value="RN">Rio Grande do Norte</option>
+    <option value="RS">Rio Grande do Sul</option>
+    <option value="RO">Rondônia</option>
+    <option value="RR">Roraima</option>
+    <option value="SC">Santa Catarina</option>
+    <option value="SP">São Paulo</option>
+    <option value="SE">Sergipe</option>
+    <option value="TO">Tocantins</option>
+    <option value="EX">Estrangeiro</option>
+</select>
+<lable>Cidade:         </lable><input type="text" name="cidade" placeholder="Cidade" required>
+<lable>Responsável:    </lable><input type="text" name="responsavel" placeholder="Responsável" required>
+<lable>Telefone Fixo:  </lable><input type="text" name="telefone" placeholder="Telefone Fixo" onkeydown="javascript: fMasc( this, mTel );" required>
+<lable>Celular:        </lable><input type="text" name="celular" placeholder="Celular" onkeydown="javascript: fMasc( this, mTel );">
+<lable>Email:          </lable><input type="email" name="email" placeholder="Email" required>
+<lable>Latitude:       </lable><input type="number" name="latitude" placeholder="Latitude" required>
+<lable>Longitude:      </lable><input type="number" name="longitude" placeholder="Longitude" required>
+<input type="submit" value="Cadastrar Empresa">
+<button><a href="../index.php">Cancelar</a></button>
+</form>
 </body>
-<script>
-$(function(){
-    $('#add_empresa').modal('show');
-});
-</script>
 </html>

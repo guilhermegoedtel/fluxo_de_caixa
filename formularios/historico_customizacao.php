@@ -2,6 +2,9 @@
 session_start();
 include '../includes/session.php';
 include_once("conectar.php");
+$responsavel = $_SESSION['nome'];
+$mensagem = $_SESSION['msg'];
+echo $mensagem;
 ?>
 <!Doctype html>
 <head>
@@ -17,7 +20,6 @@ include_once("conectar.php");
 <body>
 <div id="page-content-wrapper">
     <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#impostos">Adicionar Impostos/Encargos</button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
             <li class="nav-item">
@@ -30,46 +32,35 @@ include_once("conectar.php");
 <table class="table table-bordered">
   <thead>
     <tr>
-      <th>Impostos/Encargos</th>
+    <th>Customização</th>
+    <th>Tempo em Horas</th>
+    <th>Ferramenta</th>
+    <th>Empresa</th>
+    <th>Valor Planejado</th>
+    <th>Data Planejada</th>
+    <th>Valor Recebido</th>
+    <th>Data de Recebimento</th>
+    <th>Descrição Customização</th>
     </tr>  
   </thead>
   <tbody>
-<?php
-$result_diario = "SELECT impostos_encargos FROM add_impostos_encargos";
-$resultado_diario = mysqli_query($conn, $result_diario);
-while($row_diario = mysqli_fetch_assoc($resultado_diario)){
+    <?php
+    $result = mysqli_query($conn,"SELECT * FROM historico_entrada_customizacao");
+    while($row = mysqli_fetch_array($result)){
     ?>
     <tr>
-      <td><?php echo $row_diario['impostos_encargos']; ?></td>
+    <td><?php echo($row['customizacao']);?></td>
+    <td><?php echo($row['tempo_horas']);?></td>
+    <td><?php echo($row['ferramenta']);?></td>
+    <td><?php echo($row['empresa']);?></td>
+    <td>Valor R$: <?php echo($row['valor_planejamento']);?></td>
+    <td>Data: <?php echo($row['data_planejamento']);?></td>
+    <td>Valor R$: <?php echo($row['valor_receber']);?></td>
+    <td>Data: <?php echo($row['data_paga']);?></td>
+    <td><?php echo($row['observacao']);?></td>
     </tr>
-<?php
-}
-?>
-<tbody>
+    <?php
+    }
+    ?> 
+  <tbody>
 </table>
-<div class="modal fade" id="impostos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="impostosLabel">Cadastrar Contas</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form action="valida_impostos_encargos.php" method="POST">
-            <div class="form-group">
-                <label>Imposto/Encargo:</label>
-                <input type="text" name="impostos_encargos" id="impostos_encargos" class="form-control" placeholder="Digite o Imposto/Encargo">
-            </div>
-        </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                <input type="submit" name="impostos" id="impostos" value="Salvar" class="btn btn-primary">
-            </div>
-        </form>
-    </div>
-  </div>
-</div>
-</body>
-</html>
