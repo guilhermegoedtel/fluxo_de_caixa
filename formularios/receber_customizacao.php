@@ -72,7 +72,7 @@ while($row = mysqli_fetch_array($result)){
               </div>
             </div>
             <div class="modal-footer">
-                <a href="taxa_bancaria.php"><button class="btn btn-secondary">Cancelar</button></a>
+                <a href="entrada_customizacao.php"><button class="btn btn-secondary">Cancelar</button></a>
                 <?php $_SESSION['msg'] = "<p style='color:green;'>Alteração de status Cancelada !</p>"; ?>
                 <input type="submit" name="receber" id="receber" value="Realizar Recebimento" class="btn btn-primary">
             </div>

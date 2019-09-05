@@ -66,11 +66,12 @@ while($row_diario = mysqli_fetch_array($result)){
       }elseif($icalled == ''){
         $icalled = 0;
       }
-    $total = ($fives + $auditorias + $vda + $assitec + $projetos + $connect + $tools + $icalled);
-    $total = (($total * $porcentagem)/100);
+    $total_sem = ($fives + $auditorias + $vda + $assitec + $projetos + $connect + $tools + $icalled);
+    $total = (($total_sem * $porcentagem)/100);
     $total1 = ($fives + $auditorias + $vda + $assitec + $projetos + $connect + $tools + $icalled);
     $total1 = (($total1 * $porcentagem)/100);
     $total1 = number_format($total1/100,2,",",".");
+    $total_receber = ($total_sem - $total);
 }
 ?>
 <div class="modal fade" id="pagar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -97,10 +98,11 @@ while($row_diario = mysqli_fetch_array($result)){
           <input type="hidden" name="connect" value="<?php echo $connect; ?>">
           <input type="hidden" name="tools" value="<?php echo $tools; ?>">
           <input type="hidden" name="icalled" value="<?php echo $icalled; ?>">
-          <input type="hidden" name="total" value="<?php echo $total; ?>">
+          <input type="hidden" name="total" value="<?php echo $total_receber; ?>">
           <div class="form-group">
             <label>Valor do pagamento:</label>
             <input type="text" name="valor_pago" class="form-control" value="<?php echo $total1; ?>" placeholder="<?php echo $total1; ?>" disabled>
+            <input type="hidden" name="valor_pago" value="<?php echo $total; ?>">
           </div>
           <div class="form-group">
             <label>Data de Pagamento:</label>

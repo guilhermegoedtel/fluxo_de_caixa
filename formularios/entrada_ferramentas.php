@@ -2,38 +2,6 @@
 session_start();
 include '../includes/session.php';
 include_once("conectar.php");
-
-//Mexer Banco de dados
-$result = "SELECT * FROM entrada_ferramenta";
-$resultado = mysqli_query($conn, $result);
-while($row = mysqli_fetch_assoc($resultado)){
-    $fives = $row['fives'];
-    $auditorias = $row['auditorias'];
-    $vda = $row['vda'];
-    $assitec = $row['assitec'];
-    $projetos = $row['projetos'];
-    $connect = $row['connect'];
-    $tools = $row['tools'];
-    $icalled = $row['icalled'];
-    if($fives == ''){
-        $fives = 0;
-    }else if($auditorias == ''){
-        $auditorias = 0;
-    }else if($vda == ''){
-        $vda = 0;
-    }elseif($assitec == ''){
-        $assitec = 0;
-    }elseif($projetos == ''){
-        $projetos = 0;
-    }elseif($connect == ''){
-        $connect = 0;
-    }elseif($tools == ''){
-        $tools = 0;
-    }elseif($icalled){
-        $icalled = 0;
-    }
-    $total = ($fives + $auditorias + $vda + $assitec + $projetos + $connect + $tools + $icalled);
-}
 ?>
 <!Doctype html>
 <head>
@@ -119,15 +87,16 @@ function mreais(v){
       <th>Empresa</th>
       <th>Representante</th>
       <th>%</th>
-      <th>E-5s</th>
-      <th>E-Auditorias</th>
+      <th>5s</th>
+      <th>Auditorias</th>
       <th>VDA</th>
-      <th>E-Assitec</th>
-      <th>E-Projetos</th>
-      <th>E-Connect</th>
-      <th>E-Tools</th>
+      <th>Assitec</th>
+      <th>Projetos</th>
+      <th>Connect</th>
+      <th>Tools</th>
       <th>iCalled</th>
-      <th>%</th>
+      <th>% Pagar</th>
+      <th>Receber</th>
       <th>Ações</th>
     </tr>  
   </thead>
@@ -139,22 +108,65 @@ $resultado_diario = mysqli_query($conn, $result_diario);
 while($row_diario = mysqli_fetch_assoc($resultado_diario)){
 ?>
     <tr>
+      <?php $id = $row_diario['ID']; ?>
       <td><?php echo $row_diario['inicio']; ?></td>
-      <td><?php echo $row_diario['periodo']; ?></td>
+      <td><?php echo $row_diario['periodo']; ?> Meses</td>
       <td><?php echo $row_diario['termino']; ?></td>
       <td><?php echo $row_diario['empresa']; ?></td>
       <td><?php echo $row_diario['representante']; ?></td>
-      <td><?php echo $row_diario['porcentagem']; ?></td>
-      <td><?php echo $row_diario['fives']; ?></td>
-      <td><?php echo $row_diario['auditorias']; ?></td>
-      <td><?php echo $row_diario['vda']; ?></td>
-      <td><?php echo $row_diario['assitec']; ?></td>
-      <td><?php echo $row_diario['projetos']; ?></td>
-      <td><?php echo $row_diario['connect']; ?></td>
-      <td><?php echo $row_diario['tools']; ?></td>
-      <td><?php echo $row_diario['icalled']; ?></td>
-      <td><?php echo $total; ?></td>
-      <td>TESTE</td>
+      <?php $porcentagem = $row_diario['porcentagem']; ?>
+      <td><?php echo $porcentagem; ?></td>
+      <?php $fives = $row_diario['fives']; ?>
+      <?php $fives1 = number_format($fives/100,2,",","."); ?>
+      <td><?php echo $fives1; ?></td>
+      <?php $auditorias = $row_diario['auditorias']; ?>
+      <?php $auditorias1 = number_format($auditorias/100,2,",","."); ?>
+      <td><?php echo $auditorias1; ?></td>
+      <?php $vda = $row_diario['vda']; ?>
+      <?php $vda1 = number_format($vda/100,2,",","."); ?>
+      <td><?php echo $vda1; ?></td>
+      <?php $assitec = $row_diario['assitec']; ?></td>
+      <?php $assitec1 = number_format($assitec/100,2,",","."); ?>
+      <td><?php echo $assitec1; ?></td>
+      <?php $projetos = $row_diario['projetos']; ?>
+      <?php $projetos1 = number_format($projetos/100,2,",","."); ?>
+      <td><?php echo $projetos1; ?></td>
+      <?php $connect = $row_diario['connect']; ?>
+      <?php $connect1 = number_format($connect/100,2,",","."); ?>
+      <td><?php echo $connect1; ?></td>
+      <?php $tools = $row_diario['tools']; ?>
+      <?php $tools1 = number_format($tools/100,2,",","."); ?>
+      <td><?php echo $tools1; ?></td>
+      <?php $icalled = $row_diario['icalled']; ?>
+      <?php $icalled1 = number_format($icalled/100,2,",","."); ?>
+      <td><?php echo $icalled1; ?></td>
+      <?php
+        if($fives == ''){
+            $fives = 0;
+        }else if($auditorias == ''){
+            $auditorias = 0;
+        }else if($vda == ''){
+            $vda = 0;
+        }elseif($assitec == ''){
+            $assitec = 0;
+        }elseif($projetos == ''){
+            $projetos = 0;
+        }elseif($connect == ''){
+            $connect = 0;
+        }elseif($tools == ''){
+            $tools = 0;
+        }elseif($icalled == ''){
+            $icalled = 0;
+        }
+        $total = ($fives + $auditorias + $vda + $assitec + $projetos + $connect + $tools + $icalled);
+        $total_sem = (($total * $porcentagem)/100);
+        $total_sem_print = number_format($total_sem/100,2,",",".");
+        $total_com = ($total - $total_sem);
+        $total_sem = number_format($total_com/100,2,",",".");
+      ?>
+      <td><?php echo $total_sem_print; ?></td>
+      <td><?php echo $total_sem; ?></td>
+      <td><a href="pagar_porcentagem_representante.php?ID=<?php echo $id; ?>"><button class="btn btn-success">Pagar</button></a></td>
     </tr>
 <?php
 }

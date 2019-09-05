@@ -1,0 +1,532 @@
+<?php
+session_start();
+include_once("conectar.php");
+/*Querys Ferramentas*/
+$result_ferramentas_mes_1 = mysqli_query($conn,"SELECT total FROM historico_entrada_ferramentas WHERE data_paga BETWEEN '2019-01-01' AND '2019-01-31'");
+while($row = mysqli_fetch_array($result_ferramentas_mes_1)){
+  $plane_ferramentas_mes_01 = 0; //Busca no BD
+  $pago_ferramentas_mes_01 =  $row['total']; //Busca no BD
+  $plane_ferramentas_mes_01 = str_replace(".", "" ,$plane_ferramentas_mes_01);
+  $plane_ferramentas_mes_01 = str_replace(",", "" ,$plane_ferramentas_mes_01);
+  $pago_ferramentas_mes_01 = str_replace(".", "" ,$pago_ferramentas_mes_01);
+  $pago_ferramentas_mes_01 = str_replace(",", "" ,$pago_ferramentas_mes_01);
+  $guarda_plane_ferramentas_01 = ($plane_ferramentas_mes_01 + $guarda_plane_ferramentas_01);
+  $guarda_ferramentas_01 = ($pago_ferramentas_mes_01 + $guarda_ferramentas_01);
+  $plane_ferramentas_01 = number_format($guarda_plane_ferramentas_01/100,2,",",".");
+  $pago_ferramentas_01 = number_format($guarda_ferramentas_01/100,2,",",".");
+}
+$result_ferramentas_mes_2 = mysqli_query($conn,"SELECT total FROM historico_entrada_ferramentas WHERE data_paga BETWEEN '2019-02-01' AND '2019-02-28'");
+while($row = mysqli_fetch_array($result_ferramentas_mes_2)){
+  $plane_ferramentas_mes_02 = 0; //Busca no BD
+  $pago_ferramentas_mes_02 =  $row['total']; //Busca no BD
+  $plane_ferramentas_mes_02 = str_replace(".", "" ,$plane_ferramentas_mes_02);
+  $plane_ferramentas_mes_02 = str_replace(",", "" ,$plane_ferramentas_mes_02);
+  $pago_ferramentas_mes_02 = str_replace(".", "" ,$pago_ferramentas_mes_02);
+  $pago_ferramentas_mes_02 = str_replace(",", "" ,$pago_ferramentas_mes_02);
+  $guarda_plane_ferramentas_02 = ($plane_ferramentas_mes_02 + $guarda_plane_ferramentas_02);
+  $guarda_ferramentas_02 = ($pago_ferramentas_mes_02 + $guarda_ferramentas_02);
+  $plane_ferramentas_02 = number_format($guarda_plane_ferramentas_02/100,2,",",".");
+  $pago_ferramentas_02 = number_format($guarda_ferramentas_02/100,2,",",".");
+}
+$result_taxas_mes_3 = mysqli_query($conn,"SELECT total FROM historico_entrada_ferramentas WHERE data_paga BETWEEN '2019-03-01' AND '2019-03-31'");
+while($row = mysqli_fetch_array($result_taxas_mes_3)){
+  $plane_ferramentas_mes_03 = 0; //Busca no BD
+  $pago_ferramentas_mes_03 =  $row['total']; //Busca no BD
+  $plane_ferramentas_mes_03 = str_replace(".", "" ,$plane_ferramentas_mes_03);
+  $plane_ferramentas_mes_03 = str_replace(",", "" ,$plane_ferramentas_mes_03);
+  $pago_ferramentas_mes_03 = str_replace(".", "" ,$pago_ferramentas_mes_03);
+  $pago_ferramentas_mes_03 = str_replace(",", "" ,$pago_ferramentas_mes_03);
+  $guarda_plane_ferramentas_03 = ($plane_ferramentas_mes_03 + $guarda_plane_ferramentas_03);
+  $guarda_ferramentas_03 = ($pago_ferramentas_mes_03 + $guarda_ferramentas_03);
+  $plane_ferramentas_03 = number_format($guarda_plane_ferramentas_03/100,2,",",".");
+  $pago_ferramentas_03 = number_format($guarda_ferramentas_03/100,2,",",".");
+}
+$result_taxas_mes_4 = mysqli_query($conn,"SELECT total FROM historico_entrada_ferramentas WHERE data_paga BETWEEN '2019-04-01' AND '2019-04-30'");
+while($row = mysqli_fetch_array($result_taxas_mes_4)){
+  $plane_ferramentas_mes_04 = 0; //Busca no BD
+  $pago_ferramentas_mes_04 =  $row['total']; //Busca no BD
+  $plane_ferramentas_mes_04 = str_replace(".", "" ,$plane_ferramentas_mes_04);
+  $plane_ferramentas_mes_04 = str_replace(",", "" ,$plane_ferramentas_mes_04);
+  $pago_ferramentas_mes_04 = str_replace(".", "" ,$pago_ferramentas_mes_04);
+  $pago_ferramentas_mes_04 = str_replace(",", "" ,$pago_ferramentas_mes_04);
+  $guarda_plane_ferramentas_04 = ($plane_ferramentas_mes_04 + $guarda_plane_ferramentas_04);
+  $guarda_ferramentas_04 = ($pago_ferramentas_mes_04 + $guarda_ferramentas_04);
+  $plane_ferramentas_04 = number_format($guarda_plane_ferramentas_04/100,2,",",".");
+  $pago_ferramentas_04 = number_format($guarda_ferramentas_04/100,2,",",".");
+}
+$result_taxas_mes_5 = mysqli_query($conn,"SELECT total FROM historico_entrada_ferramentas WHERE data_paga BETWEEN '2019-05-01' AND '2019-05-31'");
+while($row = mysqli_fetch_array($result_taxas_mes_5)){
+  $plane_ferramentas_mes_05 = 0; //Busca no BD
+  $pago_ferramentas_mes_05 =  $row['total']; //Busca no BD
+  $plane_ferramentas_mes_05 = str_replace(".", "" ,$plane_ferramentas_mes_05);
+  $plane_ferramentas_mes_05 = str_replace(",", "" ,$plane_ferramentas_mes_05);
+  $pago_ferramentas_mes_05 = str_replace(".", "" ,$pago_ferramentas_mes_05);
+  $pago_ferramentas_mes_05 = str_replace(",", "" ,$pago_ferramentas_mes_05);
+  $guarda_plane_ferramentas_05 = ($plane_ferramentas_mes_05 + $guarda_plane_ferramentas_05);
+  $guarda_ferramentas_05 = ($pago_ferramentas_mes_05 + $guarda_ferramentas_05);
+  $plane_ferramentas_05 = number_format($guarda_plane_ferramentas_05/100,2,",",".");
+  $pago_ferramentas_05 = number_format($guarda_ferramentas_05/100,2,",",".");
+}
+$result_taxas_mes_6 = mysqli_query($conn,"SELECT total FROM historico_entrada_ferramentas WHERE data_paga BETWEEN '2019-06-01' AND '2019-06-30'");
+while($row = mysqli_fetch_array($result_taxas_mes_6)){
+  $plane_ferramentas_mes_06 = 0; //Busca no BD
+  $pago_ferramentas_mes_06 =  $row['total']; //Busca no BD
+  $plane_ferramentas_mes_06 = str_replace(".", "" ,$plane_ferramentas_mes_06);
+  $plane_ferramentas_mes_06 = str_replace(",", "" ,$plane_ferramentas_mes_06);
+  $pago_ferramentas_mes_06 = str_replace(".", "" ,$pago_ferramentas_mes_06);
+  $pago_ferramentas_mes_06 = str_replace(",", "" ,$pago_ferramentas_mes_06);
+  $guarda_plane_ferramentas_06 = ($plane_ferramentas_mes_06 + $guarda_plane_ferramentas_06);
+  $guarda_ferramentas_06 = ($pago_ferramentas_mes_06 + $guarda_ferramentas_06);
+  $plane_ferramentas_06 = number_format($guarda_plane_ferramentas_06/100,2,",",".");
+  $pago_ferramentas_06 = number_format($guarda_ferramentas_06/100,2,",",".");
+}
+$result_taxas_mes_7 = mysqli_query($conn,"SELECT total FROM historico_entrada_ferramentas WHERE data_paga BETWEEN '2019-07-01' AND '2019-07-31'");
+while($row = mysqli_fetch_array($result_taxas_mes_7)){
+  $plane_ferramentas_mes_07 = 0; //Busca no BD
+  $pago_ferramentas_mes_07 =  $row['total']; //Busca no BD
+  $plane_ferramentas_mes_07 = str_replace(".", "" ,$plane_ferramentas_mes_07);
+  $plane_ferramentas_mes_07 = str_replace(",", "" ,$plane_ferramentas_mes_07);
+  $pago_ferramentas_mes_07 = str_replace(".", "" ,$pago_ferramentas_mes_07);
+  $pago_ferramentas_mes_07 = str_replace(",", "" ,$pago_ferramentas_mes_07);
+  $guarda_plane_ferramentas_07 = ($plane_ferramentas_mes_07 + $guarda_plane_ferramentas_07);
+  $guarda_ferramentas_07 = ($pago_ferramentas_mes_07 + $guarda_ferramentas_07);
+  $plane_ferramentas_07 = number_format($guarda_plane_ferramentas_07/100,2,",",".");
+  $pago_ferramentas_07 = number_format($guarda_ferramentas_07/100,2,",",".");
+}
+$result_taxas_mes_8 = mysqli_query($conn,"SELECT total FROM historico_entrada_ferramentas WHERE data_paga BETWEEN '2019-08-01' AND '2019-08-31'");
+while($row = mysqli_fetch_array($result_taxas_mes_8)){
+  $plane_ferramentas_mes_08 = 0; //Busca no BD
+  $pago_ferramentas_mes_08 =  $row['total']; //Busca no BD
+  $plane_ferramentas_mes_08 = str_replace(".", "" ,$plane_ferramentas_mes_08);
+  $plane_ferramentas_mes_08 = str_replace(",", "" ,$plane_ferramentas_mes_08);
+  $pago_ferramentas_mes_08 = str_replace(".", "" ,$pago_ferramentas_mes_08);
+  $pago_ferramentas_mes_08 = str_replace(",", "" ,$pago_ferramentas_mes_08);
+  $guarda_plane_ferramentas_08 = ($plane_ferramentas_mes_08 + $guarda_plane_ferramentas_08);
+  $guarda_ferramentas_08 = ($pago_ferramentas_mes_08 + $guarda_ferramentas_08);
+  $plane_ferramentas_08 = number_format($guarda_plane_ferramentas_08/100,2,",",".");
+  $pago_ferramentas_08 = number_format($guarda_ferramentas_08/100,2,",",".");
+}
+$result_taxas_mes_9 = mysqli_query($conn,"SELECT total FROM historico_entrada_ferramentas WHERE data_paga BETWEEN '2019-09-01' AND '2019-09-30'");
+while($row = mysqli_fetch_array($result_taxas_mes_9)){
+  $plane_ferramentas_mes_09 = 0; //Busca no BD
+  $pago_ferramentas_mes_09 =  $row['total']; //Busca no BD
+  $plane_ferramentas_mes_09 = str_replace(".", "" ,$plane_ferramentas_mes_09);
+  $plane_ferramentas_mes_09 = str_replace(",", "" ,$plane_ferramentas_mes_09);
+  $pago_ferramentas_mes_09 = str_replace(".", "" ,$pago_ferramentas_mes_09);
+  $pago_ferramentas_mes_09 = str_replace(",", "" ,$pago_ferramentas_mes_09);
+  $guarda_plane_ferramentas_09 = ($plane_ferramentas_mes_09 + $guarda_plane_ferramentas_09);
+  $guarda_ferramentas_09 = ($pago_ferramentas_mes_09 + $guarda_ferramentas_09);
+  $plane_ferramentas_09 = number_format($guarda_plane_ferramentas_09/100,2,",",".");
+  $pago_ferramentas_09 = number_format($guarda_ferramentas_09/100,2,",",".");
+}
+$result_taxas_mes_10 = mysqli_query($conn,"SELECT total FROM historico_entrada_ferramentas WHERE data_paga BETWEEN '2019-10-01' AND '2019-10-31'");
+while($row = mysqli_fetch_array($result_taxas_mes_10)){
+  $plane_ferramentas_mes_10 = 0; //Busca no BD
+  $pago_ferramentas_mes_10 =  $row['total']; //Busca no BD
+  $plane_ferramentas_mes_10 = str_replace(".", "" ,$plane_ferramentas_mes_10);
+  $plane_ferramentas_mes_10 = str_replace(",", "" ,$plane_ferramentas_mes_10);
+  $pago_ferramentas_mes_10 = str_replace(".", "" ,$pago_ferramentas_mes_10);
+  $pago_ferramentas_mes_10 = str_replace(",", "" ,$pago_ferramentas_mes_10);
+  $guarda_plane_ferramentas_10 = ($plane_ferramentas_mes_10 + $guarda_plane_ferramentas_10);
+  $guarda_ferramentas_10 = ($pago_ferramentas_mes_10 + $guarda_ferramentas_10);
+  $plane_ferramentas_10 = number_format($guarda_plane_ferramentas_10/100,2,",",".");
+  $pago_ferramentas_10 = number_format($guarda_ferramentas_10/100,2,",",".");
+}
+$result_taxas_mes_11 = mysqli_query($conn,"SELECT total FROM historico_entrada_ferramentas WHERE data_paga BETWEEN '2019-11-01' AND '2019-11-30'");
+while($row = mysqli_fetch_array($result_taxas_mes_11)){
+  $plane_ferramentas_mes_11 = 0; //Busca no BD
+  $pago_ferramentas_mes_11 =  $row['total']; //Busca no BD
+  $plane_ferramentas_mes_11 = str_replace(".", "" ,$plane_ferramentas_mes_11);
+  $plane_ferramentas_mes_11 = str_replace(",", "" ,$plane_ferramentas_mes_11);
+  $pago_ferramentas_mes_11 = str_replace(".", "" ,$pago_ferramentas_mes_11);
+  $pago_ferramentas_mes_11 = str_replace(",", "" ,$pago_ferramentas_mes_11);
+  $guarda_plane_ferramentas_11 = ($plane_ferramentas_mes_11 + $guarda_plane_ferramentas_11);
+  $guarda_ferramentas_11 = ($pago_ferramentas_mes_11 + $guarda_ferramentas_11);
+  $plane_ferramentas_11 = number_format($guarda_plane_ferramentas_11/100,2,",",".");
+  $pago_ferramentas_11 = number_format($guarda_ferramentas_11/100,2,",",".");
+}
+$result_taxas_mes_12 = mysqli_query($conn,"SELECT total FROM historico_entrada_ferramentas WHERE data_paga BETWEEN '2019-12-01' AND '2019-12-31'");
+while($row = mysqli_fetch_array($result_taxas_mes_12)){
+  $plane_ferramentas_mes_12 = 0; //Busca no BD
+  $pago_ferramentas_mes_12 =  $row['total']; //Busca no BD
+  $plane_ferramentas_mes_12 = str_replace(".", "" ,$plane_ferramentas_mes_12);
+  $plane_ferramentas_mes_12 = str_replace(",", "" ,$plane_ferramentas_mes_12);
+  $pago_ferramentas_mes_12 = str_replace(".", "" ,$pago_ferramentas_mes_12);
+  $pago_ferramentas_mes_12 = str_replace(",", "" ,$pago_ferramentas_mes_12);
+  $guarda_plane_ferramentas_12 = ($plane_ferramentas_mes_12 + $guarda_plane_ferramentas_12);
+  $guarda_ferramentas_12 = ($pago_ferramentas_mes_12 + $guarda_ferramentas_12);
+  $plane_ferramentas_12 = number_format($guarda_plane_ferramentas_12/100,2,",",".");
+  $pago_ferramentas_12 = number_format($guarda_ferramentas_12/100,2,",",".");
+}
+/*Fim Querys Ferramentas*/
+?>
+<?php
+/*Querys Customizações*/
+$result_customizacoes_mes_1 = mysqli_query($conn,"SELECT valor_planejamento, valor_receber FROM historico_entrada_customizacao WHERE data_paga BETWEEN '2019-01-01' AND '2019-01-31'");
+while($row = mysqli_fetch_array($result_customizacoes_mes_1)){
+  $plane_customizacoes_mes_01 = $row['valor_planejamento'];
+  $pago_customizacoes_mes_01 =  $row['valor_receber'];
+  $plane_customizacoes_mes_01 = str_replace(".", "" ,$plane_customizacoes_mes_01);
+  $plane_customizacoes_mes_01 = str_replace(",", "" ,$plane_customizacoes_mes_01);
+  $pago_customizacoes_mes_01 = str_replace(".", "" ,$pago_customizacoes_mes_01);
+  $pago_customizacoes_mes_01 = str_replace(",", "" ,$pago_customizacoes_mes_01);
+  $guarda_plane_customizacoes_01 = ($plane_customizacoes_mes_01 + $guarda_plane_customizacoes_01);
+  $guarda_customizacoes_01 = ($pago_customizacoes_mes_01 + $guarda_customizacoes_01);
+  $plane_customizacoes_01 = number_format($guarda_plane_customizacoes_01/100,2,",",".");
+  $pago_customizacoes_01 = number_format($guarda_customizacoes_01/100,2,",",".");
+}
+$result_customizacoes_mes_2 = mysqli_query($conn,"SELECT valor_planejamento, valor_receber FROM historico_entrada_customizacao WHERE data_paga BETWEEN '2019-02-01' AND '2019-02-28'");
+while($row = mysqli_fetch_array($result_customizacoes_mes_2)){
+  $plane_customizacoes_mes_02 = $row['valor_planejamento'];
+  $pago_customizacoes_mes_02 =  $row['valor_receber'];
+  $plane_customizacoes_mes_02 = str_replace(".", "" ,$plane_customizacoes_mes_02);
+  $plane_customizacoes_mes_02 = str_replace(",", "" ,$plane_customizacoes_mes_02);
+  $pago_customizacoes_mes_02 = str_replace(".", "" ,$pago_customizacoes_mes_02);
+  $pago_customizacoes_mes_02 = str_replace(",", "" ,$pago_customizacoes_mes_02);
+  $guarda_plane_customizacoes_02 = ($plane_customizacoes_mes_02 + $guarda_plane_customizacoes_02);
+  $guarda_customizacoes_02 = ($pago_customizacoes_mes_02 + $guarda_customizacoes_02);
+  $plane_customizacoes_02 = number_format($guarda_plane_customizacoes_02/100,2,",",".");
+  $pago_customizacoes_02 = number_format($guarda_customizacoes_02/100,2,",",".");
+}
+$result_customizacoes_mes_3 = mysqli_query($conn,"SELECT valor_planejamento, valor_receber FROM historico_entrada_customizacao WHERE data_paga BETWEEN '2019-03-01' AND '2019-03-31'");
+while($row = mysqli_fetch_array($result_customizacoes_mes_3)){
+  $plane_customizacoes_mes_03 = $row['valor_planejamento'];
+  $pago_customizacoes_mes_03 =  $row['valor_receber'];
+  $plane_customizacoes_mes_03 = str_replace(".", "" ,$plane_customizacoes_mes_03);
+  $plane_customizacoes_mes_03 = str_replace(",", "" ,$plane_customizacoes_mes_03);
+  $pago_customizacoes_mes_03 = str_replace(".", "" ,$pago_customizacoes_mes_03);
+  $pago_customizacoes_mes_03 = str_replace(",", "" ,$pago_customizacoes_mes_03);
+  $guarda_plane_customizacoes_03 = ($plane_customizacoes_mes_03 + $guarda_plane_customizacoes_03);
+  $guarda_customizacoes_03 = ($pago_customizacoes_mes_03 + $guarda_customizacoes_03);
+  $plane_customizacoes_03 = number_format($guarda_plane_customizacoes_03/100,2,",",".");
+  $pago_customizacoes_03 = number_format($guarda_customizacoes_03/100,2,",",".");
+}
+$result_customizacoes_mes_4 = mysqli_query($conn,"SELECT valor_planejamento, valor_receber FROM historico_entrada_customizacao WHERE data_paga BETWEEN '2019-04-01' AND '2019-04-30'");
+while($row = mysqli_fetch_array($result_customizacoes_mes_4)){
+  $plane_customizacoes_mes_04 = $row['valor_planejamento'];
+  $pago_customizacoes_mes_04 =  $row['valor_receber'];
+  $plane_customizacoes_mes_04 = str_replace(".", "" ,$plane_customizacoes_mes_04);
+  $plane_customizacoes_mes_04 = str_replace(",", "" ,$plane_customizacoes_mes_04);
+  $pago_customizacoes_mes_04 = str_replace(".", "" ,$pago_customizacoes_mes_04);
+  $pago_customizacoes_mes_04 = str_replace(",", "" ,$pago_customizacoes_mes_04);
+  $guarda_plane_customizacoes_04 = ($plane_customizacoes_mes_04 + $guarda_plane_customizacoes_04);
+  $guarda_customizacoes_04 = ($pago_customizacoes_mes_04 + $guarda_customizacoes_04);
+  $plane_customizacoes_04 = number_format($guarda_plane_customizacoes_04/100,2,",",".");
+  $pago_customizacoes_04 = number_format($guarda_customizacoes_04/100,2,",",".");
+}
+$result_customizacoes_mes_5 = mysqli_query($conn,"SELECT valor_planejamento, valor_receber FROM historico_entrada_customizacao WHERE data_paga BETWEEN '2019-05-01' AND '2019-05-31'");
+while($row = mysqli_fetch_array($result_customizacoes_mes_5)){
+  $plane_customizacoes_mes_05 = $row['valor_planejamento'];
+  $pago_customizacoes_mes_05 =  $row['valor_receber'];
+  $plane_customizacoes_mes_05 = str_replace(".", "" ,$plane_customizacoes_mes_05);
+  $plane_customizacoes_mes_05 = str_replace(",", "" ,$plane_customizacoes_mes_05);
+  $pago_customizacoes_mes_05 = str_replace(".", "" ,$pago_customizacoes_mes_05);
+  $pago_customizacoes_mes_05 = str_replace(",", "" ,$pago_customizacoes_mes_05);
+  $guarda_plane_customizacoes_05 = ($plane_customizacoes_mes_05 + $guarda_plane_customizacoes_05);
+  $guarda_customizacoes_05 = ($pago_customizacoes_mes_05 + $guarda_customizacoes_05);
+  $plane_customizacoes_05 = number_format($guarda_plane_customizacoes_05/100,2,",",".");
+  $pago_customizacoes_05 = number_format($guarda_customizacoes_05/100,2,",",".");
+}
+$result_customizacoes_mes_6 = mysqli_query($conn,"SELECT valor_planejamento, valor_receber FROM historico_entrada_customizacao WHERE data_paga BETWEEN '2019-06-01' AND '2019-06-30'");
+while($row = mysqli_fetch_array($result_customizacoes_mes_6)){
+  $plane_customizacoes_mes_06 = $row['valor_planejamento'];
+  $pago_customizacoes_mes_06 =  $row['valor_receber'];
+  $plane_customizacoes_mes_06 = str_replace(".", "" ,$plane_customizacoes_mes_06);
+  $plane_customizacoes_mes_06 = str_replace(",", "" ,$plane_customizacoes_mes_06);
+  $pago_customizacoes_mes_06 = str_replace(".", "" ,$pago_customizacoes_mes_06);
+  $pago_customizacoes_mes_06= str_replace(",", "" ,$pago_customizacoes_mes_06);
+  $guarda_plane_customizacoes_06 = ($plane_customizacoes_mes_06 + $guarda_plane_customizacoes_06);
+  $guarda_customizacoes_06 = ($pago_customizacoes_mes_06 + $guarda_customizacoes_06);
+  $plane_customizacoes_06 = number_format($guarda_plane_customizacoes_06/100,2,",",".");
+  $pago_customizacoes_06 = number_format($guarda_customizacoes_06/100,2,",",".");
+}
+$result_customizacoes_mes_7 = mysqli_query($conn,"SELECT valor_planejamento, valor_receber FROM historico_entrada_customizacao WHERE data_paga BETWEEN '2019-07-01' AND '2019-07-31'");
+while($row = mysqli_fetch_array($result_customizacoes_mes_7)){
+  $plane_customizacoes_mes_07 = $row['valor_planejamento'];
+  $pago_customizacoes_mes_07 =  $row['valor_receber'];
+  $plane_customizacoes_mes_07 = str_replace(".", "" ,$plane_customizacoes_mes_07);
+  $plane_customizacoes_mes_07 = str_replace(",", "" ,$plane_customizacoes_mes_07);
+  $pago_customizacoes_mes_07 = str_replace(".", "" ,$pago_customizacoes_mes_07);
+  $pago_customizacoes_mes_07 = str_replace(",", "" ,$pago_customizacoes_mes_07);
+  $guarda_plane_customizacoes_07 = ($plane_customizacoes_mes_07 + $guarda_plane_customizacoes_07);
+  $guarda_customizacoes_07 = ($pago_customizacoes_mes_07 + $guarda_customizacoes_07);
+  $plane_customizacoes_07 = number_format($guarda_plane_customizacoes_07/100,2,",",".");
+  $pago_customizacoes_07 = number_format($guarda_customizacoes_07/100,2,",",".");
+}
+$result_customizacoes_mes_8 = mysqli_query($conn,"SELECT valor_planejamento, valor_receber FROM historico_entrada_customizacao WHERE data_paga BETWEEN '2019-08-01' AND '2019-08-31'");
+while($row = mysqli_fetch_array($result_customizacoes_mes_8)){
+  $plane_customizacoes_mes_08 = $row['valor_planejamento'];
+  $pago_customizacoes_mes_08 =  $row['valor_receber'];
+  $plane_customizacoes_mes_08 = str_replace(".", "" ,$plane_customizacoes_mes_08);
+  $plane_customizacoes_mes_08 = str_replace(",", "" ,$plane_customizacoes_mes_08);
+  $pago_customizacoes_mes_08 = str_replace(".", "" ,$pago_customizacoes_mes_08);
+  $pago_customizacoes_mes_08 = str_replace(",", "" ,$pago_customizacoes_mes_08);
+  $guarda_plane_customizacoes_08 = ($plane_customizacoes_mes_08 + $guarda_plane_customizacoes_08);
+  $guarda_customizacoes_08 = ($pago_customizacoes_mes_08 + $guarda_customizacoes_08);
+  $plane_customizacoes_08 = number_format($guarda_plane_customizacoes_08/100,2,",",".");
+  $pago_customizacoes_08 = number_format($guarda_customizacoes_08/100,2,",",".");
+}
+$result_customizacoes_mes_9 = mysqli_query($conn,"SELECT valor_planejamento, valor_receber FROM historico_entrada_customizacao WHERE data_paga BETWEEN '2019-09-01' AND '2019-09-30'");
+while($row = mysqli_fetch_array($result_customizacoes_mes_9)){
+  $plane_customizacoes_mes_09 = $row['valor_planejamento'];
+  $pago_customizacoes_mes_09 =  $row['valor_receber'];
+  $plane_customizacoes_mes_09 = str_replace(".", "" ,$plane_customizacoes_mes_09);
+  $plane_customizacoes_mes_09 = str_replace(",", "" ,$plane_customizacoes_mes_09);
+  $pago_customizacoes_mes_09= str_replace(".", "" ,$pago_customizacoes_mes_09);
+  $pago_customizacoes_mes_09 = str_replace(",", "" ,$pago_customizacoes_mes_09);
+  $guarda_plane_customizacoes_09 = ($plane_customizacoes_mes_09 + $guarda_plane_customizacoes_09);
+  $guarda_customizacoes_09 = ($pago_customizacoes_mes_09 + $guarda_customizacoes_09);
+  $plane_customizacoes_09 = number_format($guarda_plane_customizacoes_09/100,2,",",".");
+  $pago_customizacoes_09 = number_format($guarda_customizacoes_09/100,2,",",".");
+}
+$result_customizacoes_mes_10 = mysqli_query($conn,"SELECT valor_planejamento, valor_receber FROM historico_entrada_customizacao WHERE data_paga BETWEEN '2019-10-01' AND '2019-10-31'");
+while($row = mysqli_fetch_array($result_customizacoes_mes_10)){
+  $plane_customizacoes_mes_10 = $row['valor_planejamento'];
+  $pago_customizacoes_mes_10 =  $row['valor_receber'];
+  $plane_customizacoes_mes_10 = str_replace(".", "" ,$plane_customizacoes_mes_10);
+  $plane_customizacoes_mes_10 = str_replace(",", "" ,$plane_customizacoes_mes_10);
+  $pago_customizacoes_mes_10 = str_replace(".", "" ,$pago_customizacoes_mes_10);
+  $pago_customizacoes_mes_10 = str_replace(",", "" ,$pago_customizacoes_mes_10);
+  $guarda_plane_customizacoes_10 = ($plane_customizacoes_mes_10 + $guarda_plane_customizacoes_10);
+  $guarda_customizacoes_10 = ($pago_customizacoes_mes_10 + $guarda_customizacoes_10);
+  $plane_customizacoes_10 = number_format($guarda_plane_customizacoes_10/100,2,",",".");
+  $pago_customizacoes_10 = number_format($guarda_customizacoes_10/100,2,",",".");
+}
+$result_customizacoes_mes_11 = mysqli_query($conn,"SELECT valor_planejamento, valor_receber FROM historico_entrada_customizacao WHERE data_paga BETWEEN '2019-11-01' AND '2019-11-30'");
+while($row = mysqli_fetch_array($result_customizacoes_mes_11)){
+  $plane_customizacoes_mes_11 = $row['valor_planejamento'];
+  $pago_customizacoes_mes_11 =  $row['valor_receber'];
+  $plane_customizacoes_mes_11 = str_replace(".", "" ,$plane_customizacoes_mes_11);
+  $plane_customizacoes_mes_11 = str_replace(",", "" ,$plane_customizacoes_mes_11);
+  $pago_customizacoes_mes_11 = str_replace(".", "" ,$pago_customizacoes_mes_11);
+  $pago_customizacoes_mes_11 = str_replace(",", "" ,$pago_customizacoes_mes_11);
+  $guarda_plane_customizacoes_11 = ($plane_customizacoes_mes_11 + $guarda_plane_customizacoes_11);
+  $guarda_customizacoes_11 = ($pago_customizacoes_mes_11 + $guarda_customizacoes_11);
+  $plane_customizacoes_11 = number_format($guarda_plane_customizacoes_11/100,2,",",".");
+  $pago_customizacoes_11 = number_format($guarda_customizacoes_11/100,2,",",".");
+}
+$result_customizacoes_mes_12 = mysqli_query($conn,"SELECT valor_planejamento, valor_receber FROM historico_entrada_customizacao WHERE data_paga BETWEEN '2019-12-01' AND '2019-12-31'");
+while($row = mysqli_fetch_array($result_customizacoes_mes_12)){
+  $plane_customizacoes_mes_12 = $row['valor_planejamento'];
+  $pago_customizacoes_mes_12 =  $row['valor_receber'];
+  $plane_customizacoes_mes_12 = str_replace(".", "" ,$plane_customizacoes_mes_12);
+  $plane_customizacoes_mes_12 = str_replace(",", "" ,$plane_customizacoes_mes_12);
+  $pago_customizacoes_mes_12 = str_replace(".", "" ,$pago_customizacoes_mes_12);
+  $pago_customizacoes_mes_12 = str_replace(",", "" ,$pago_customizacoes_mes_12);
+  $guarda_plane_customizacoes_12 = ($plane_customizacoes_mes_12 + $guarda_plane_customizacoes_12);
+  $guarda_customizacoes_12 = ($pago_customizacoes_mes_12 + $guarda_customizacoes_12);
+  $plane_customizacoes_12 = number_format($guarda_plane_customizacoes_12/100,2,",",".");
+  $pago_customizacoes_12 = number_format($guarda_customizacoes_12/100,2,",",".");
+}
+/*Fim Querys Customizações*/
+?>
+<?php
+/*Inicio Das Querys Treinamentos*/
+$result_treinamento_mes_1 = mysqli_query($conn,"SELECT valor_planejamento, valor_receber FROM historico_entrada_treianamento WHERE data_paga BETWEEN '2019-01-01' AND '2019-01-31'");
+while($row = mysqli_fetch_array($result_treinamento_mes_1)){
+  $plane_treinamento_mes_01 = $row['valor_planejamento'];
+  $pago_treinamento_mes_01 =  $row['valor_receber'];
+  $plane_treinamento_mes_01 = str_replace(".", "" ,$plane_treinamento_mes_01);
+  $plane_treinamento_mes_01 = str_replace(",", "" ,$plane_treinamento_mes_01);
+  $pago_treinamento_mes_01 = str_replace(".", "" ,$pago_treinamento_mes_01);
+  $pago_treinamento_mes_01 = str_replace(",", "" ,$pago_treinamento_mes_01);
+  $guarda_plane_treinamento_01 = ($plane_treinamento_mes_01 + $guarda_plane_treinamento_01);
+  $guarda_treinamento_01 = ($pago_treinamento_mes_01 + $guarda_treinamento_01);
+  $plane_treinamento_01 = number_format($guarda_plane_treinamento_01/100,2,",",".");
+  $pago_treinamento_01 = number_format($guarda_treinamento_01/100,2,",",".");
+}
+$result_treinamento_mes_2 = mysqli_query($conn,"SELECT valor_planejamento, valor_receber FROM historico_entrada_treianamento WHERE data_paga BETWEEN '2019-02-01' AND '2019-02-28'");
+while($row = mysqli_fetch_array($result_treinamento_mes_2)){
+  $plane_treinamento_mes_02 = $row['valor_planejamento'];
+  $pago_treinamento_mes_02 =  $row['valor_receber'];
+  $plane_treinamento_mes_02 = str_replace(".", "" ,$plane_treinamento_mes_02);
+  $plane_treinamento_mes_02 = str_replace(",", "" ,$plane_treinamento_mes_02);
+  $pago_treinamento_mes_02 = str_replace(".", "" ,$pago_treinamento_mes_02);
+  $pago_treinamento_mes_02 = str_replace(",", "" ,$pago_treinamento_mes_02);
+  $guarda_plane_treinamento_02 = ($plane_treinamento_mes_02 + $guarda_plane_treinamento_02);
+  $guarda_treinamento_02 = ($pago_treinamento_mes_02 + $guarda_treinamento_02);
+  $plane_treinamento_02 = number_format($guarda_plane_treinamento_02/100,2,",",".");
+  $pago_treinamento_02 = number_format($guarda_treinamento_02/100,2,",",".");
+}
+$result_treinamento_mes_3 = mysqli_query($conn,"SELECT valor_planejamento, valor_receber FROM historico_entrada_treianamento WHERE data_paga BETWEEN '2019-03-01' AND '2019-03-31'");
+while($row = mysqli_fetch_array($result_treinamento_mes_3)){
+  $plane_treinamento_mes_03 = $row['valor_planejamento'];
+  $pago_treinamento_mes_03 =  $row['valor_receber'];
+  $plane_treinamento_mes_03 = str_replace(".", "" ,$plane_treinamento_mes_03);
+  $plane_treinamento_mes_03 = str_replace(",", "" ,$plane_treinamento_mes_03);
+  $pago_treinamento_mes_03 = str_replace(".", "" ,$pago_treinamento_mes_03);
+  $pago_treinamento_mes_03 = str_replace(",", "" ,$pago_treinamento_mes_03);
+  $guarda_plane_treinamento_03 = ($plane_treinamento_mes_03 + $guarda_plane_treinamento_03);
+  $guarda_treinamento_03 = ($pago_treinamento_mes_03 + $guarda_treinamento_03);
+  $plane_treinamento_03 = number_format($guarda_plane_treinamento_03/100,2,",",".");
+  $pago_treinamento_03 = number_format($guarda_treinamento_03/100,2,",",".");
+}
+$result_treinamento_mes_4 = mysqli_query($conn,"SELECT valor_planejamento, valor_receber FROM historico_entrada_treianamento WHERE data_paga BETWEEN '2019-04-01' AND '2019-04-30'");
+while($row = mysqli_fetch_array($result_treinamento_mes_4)){
+  $plane_treinamento_mes_04 = $row['valor_planejamento'];
+  $pago_treinamento_mes_04 =  $row['valor_receber'];
+  $plane_treinamento_mes_04 = str_replace(".", "" ,$plane_treinamento_mes_04);
+  $plane_treinamento_mes_04 = str_replace(",", "" ,$plane_treinamento_mes_04);
+  $pago_treinamento_mes_04 = str_replace(".", "" ,$pago_treinamento_mes_04);
+  $pago_treinamento_mes_04 = str_replace(",", "" ,$pago_treinamento_mes_04);
+  $guarda_plane_treinamento_04 = ($plane_treinamento_mes_04 + $guarda_plane_treinamento_04);
+  $guarda_treinamento_04 = ($pago_treinamento_mes_04 + $guarda_treinamento_04);
+  $plane_treinamento_04 = number_format($guarda_plane_treinamento_04/100,2,",",".");
+  $pago_treinamento_04 = number_format($guarda_treinamento_04/100,2,",",".");
+}
+$result_treinamento_mes_5 = mysqli_query($conn,"SELECT valor_planejamento, valor_receber FROM historico_entrada_treianamento WHERE data_paga BETWEEN '2019-05-01' AND '2019-05-31'");
+while($row = mysqli_fetch_array($result_treinamento_mes_5)){
+  $plane_treinamento_mes_05 = $row['valor_planejamento'];
+  $pago_treinamento_mes_05 =  $row['valor_receber'];
+  $plane_treinamento_mes_05 = str_replace(".", "" ,$plane_treinamento_mes_05);
+  $plane_treinamento_mes_05 = str_replace(",", "" ,$plane_treinamento_mes_05);
+  $pago_treinamento_mes_05 = str_replace(".", "" ,$pago_treinamento_mes_05);
+  $pago_treinamento_mes_05 = str_replace(",", "" ,$pago_treinamento_mes_05);
+  $guarda_plane_treinamento_05 = ($plane_treinamento_mes_05 + $guarda_plane_treinamento_05);
+  $guarda_treinamento_05 = ($pago_treinamento_mes_05 + $guarda_treinamento_05);
+  $plane_treinamento_05 = number_format($guarda_plane_treinamento_05/100,2,",",".");
+  $pago_treinamento_05 = number_format($guarda_treinamento_05/100,2,",",".");
+}
+$result_treinamento_mes_6 = mysqli_query($conn,"SELECT valor_planejamento, valor_receber FROM historico_entrada_treianamento WHERE data_paga BETWEEN '2019-06-01' AND '2019-06-30'");
+while($row = mysqli_fetch_array($result_treinamento_mes_6)){
+  $plane_treinamento_mes_06 = $row['valor_planejamento'];
+  $pago_treinamento_mes_06 =  $row['valor_receber'];
+  $plane_treinamento_mes_06 = str_replace(".", "" ,$plane_treinamento_mes_06);
+  $plane_treinamento_mes_06 = str_replace(",", "" ,$plane_treinamento_mes_06);
+  $pago_treinamento_mes_06 = str_replace(".", "" ,$pago_treinamento_mes_06);
+  $pago_treinamento_mes_06 = str_replace(",", "" ,$pago_treinamento_mes_06);
+  $guarda_plane_treinamento_06 = ($plane_treinamento_mes_06 + $guarda_plane_treinamento_06);
+  $guarda_treinamento_06 = ($pago_treinamento_mes_06 + $guarda_treinamento_06);
+  $plane_treinamento_06 = number_format($guarda_plane_treinamento_06/100,2,",",".");
+  $pago_treinamento_06 = number_format($guarda_treinamento_06/100,2,",",".");
+}
+$result_treinamento_mes_7 = mysqli_query($conn,"SELECT valor_planejamento, valor_receber FROM historico_entrada_treianamento WHERE data_paga BETWEEN '2019-07-01' AND '2019-07-31'");
+while($row = mysqli_fetch_array($result_treinamento_mes_7)){
+  $plane_treinamento_mes_07 = $row['valor_planejamento'];
+  $pago_treinamento_mes_07 =  $row['valor_receber'];
+  $plane_treinamento_mes_07 = str_replace(".", "" ,$plane_treinamento_mes_07);
+  $plane_treinamento_mes_07 = str_replace(",", "" ,$plane_treinamento_mes_07);
+  $pago_treinamento_mes_07 = str_replace(".", "" ,$pago_treinamento_mes_07);
+  $pago_treinamento_mes_07 = str_replace(",", "" ,$pago_treinamento_mes_07);
+  $guarda_plane_treinamento_07 = ($plane_treinamento_mes_07 + $guarda_plane_treinamento_07);
+  $guarda_treinamento_07 = ($pago_treinamento_mes_07 + $guarda_treinamento_07);
+  $plane_treinamento_07 = number_format($guarda_plane_treinamento_07/100,2,",",".");
+  $pago_treinamento_07 = number_format($guarda_treinamento_07/100,2,",",".");
+}
+$result_treinamento_mes_8 = mysqli_query($conn,"SELECT valor_planejamento, valor_receber FROM historico_entrada_treianamento WHERE data_paga BETWEEN '2019-08-01' AND '2019-08-31'");
+while($row = mysqli_fetch_array($result_treinamento_mes_8)){
+  $plane_treinamento_mes_08 = $row['valor_planejamento'];
+  $pago_treinamento_mes_08 =  $row['valor_receber'];
+  $plane_treinamento_mes_08 = str_replace(".", "" ,$plane_treinamento_mes_08);
+  $plane_treinamento_mes_08 = str_replace(",", "" ,$plane_treinamento_mes_08);
+  $pago_treinamento_mes_08 = str_replace(".", "" ,$pago_treinamento_mes_08);
+  $pago_treinamento_mes_08 = str_replace(",", "" ,$pago_treinamento_mes_08);
+  $guarda_plane_treinamento_08 = ($plane_treinamento_mes_08 + $guarda_plane_treinamento_08);
+  $guarda_treinamento_08 = ($pago_treinamento_mes_08 + $guarda_treinamento_08);
+  $plane_treinamento_08 = number_format($guarda_plane_treinamento_08/100,2,",",".");
+  $pago_treinamento_08 = number_format($guarda_treinamento_08/100,2,",",".");
+}
+$result_treinamento_mes_9 = mysqli_query($conn,"SELECT valor_planejamento, valor_receber FROM historico_entrada_treianamento WHERE data_paga BETWEEN '2019-09-01' AND '2019-09-30'");
+while($row = mysqli_fetch_array($result_treinamento_mes_9)){
+  $plane_treinamento_mes_09 = $row['valor_planejamento'];
+  $pago_treinamento_mes_09 =  $row['valor_receber'];
+  $plane_treinamento_mes_09 = str_replace(".", "" ,$plane_treinamento_mes_09);
+  $plane_treinamento_mes_09 = str_replace(",", "" ,$plane_treinamento_mes_09);
+  $pago_treinamento_mes_09 = str_replace(".", "" ,$pago_treinamento_mes_09);
+  $pago_treinamento_mes_09= str_replace(",", "" ,$pago_treinamento_mes_09);
+  $guarda_plane_treinamento_09 = ($plane_treinamento_mes_09 + $guarda_plane_treinamento_09);
+  $guarda_treinamento_09 = ($pago_treinamento_mes_09 + $guarda_treinamento_09);
+  $plane_treinamento_09 = number_format($guarda_plane_treinamento_09/100,2,",",".");
+  $pago_treinamento_09 = number_format($guarda_treinamento_09/100,2,",",".");
+}
+$result_treinamento_mes_10 = mysqli_query($conn,"SELECT valor_planejamento, valor_receber FROM historico_entrada_treianamento WHERE data_paga BETWEEN '2019-10-01' AND '2019-10-31'");
+while($row = mysqli_fetch_array($result_treinamento_mes_10)){
+  $plane_treinamento_mes_10 = $row['valor_planejamento'];
+  $pago_treinamento_mes_10 =  $row['valor_receber'];
+  $plane_treinamento_mes_10 = str_replace(".", "" ,$plane_treinamento_mes_10);
+  $plane_treinamento_mes_10 = str_replace(",", "" ,$plane_treinamento_mes_10);
+  $pago_treinamento_mes_10 = str_replace(".", "" ,$pago_treinamento_mes_10);
+  $pago_treinamento_mes_10 = str_replace(",", "" ,$pago_treinamento_mes_10);
+  $guarda_plane_treinamento_10 = ($plane_treinamento_mes_10 + $guarda_plane_treinamento_10);
+  $guarda_treinamento_10 = ($pago_treinamento_mes_10 + $guarda_treinamento_10);
+  $plane_treinamento_10 = number_format($guarda_plane_treinamento_10/100,2,",",".");
+  $pago_treinamento_10 = number_format($guarda_treinamento_10/100,2,",",".");
+}
+$result_treinamento_mes_11 = mysqli_query($conn,"SELECT valor_planejamento, valor_receber FROM historico_entrada_treianamento WHERE data_paga BETWEEN '2019-11-01' AND '2019-11-30'");
+while($row = mysqli_fetch_array($result_treinamento_mes_11)){
+  $plane_treinamento_mes_11 = $row['valor_planejamento'];
+  $pago_treinamento_mes_11 =  $row['valor_receber'];
+  $plane_treinamento_mes_11 = str_replace(".", "" ,$plane_treinamento_mes_11);
+  $plane_treinamento_mes_11 = str_replace(",", "" ,$plane_treinamento_mes_11);
+  $pago_treinamento_mes_11 = str_replace(".", "" ,$pago_treinamento_mes_11);
+  $pago_treinamento_mes_11 = str_replace(",", "" ,$pago_treinamento_mes_11);
+  $guarda_plane_treinamento_11 = ($plane_treinamento_mes_11 + $guarda_plane_treinamento_11);
+  $guarda_treinamento_11 = ($pago_treinamento_mes_11 + $guarda_treinamento_11);
+  $plane_treinamento_11 = number_format($guarda_plane_treinamento_11/100,2,",",".");
+  $pago_treinamento_11 = number_format($guarda_treinamento_11/100,2,",",".");
+}
+$result_treinamento_mes_12 = mysqli_query($conn,"SELECT valor_planejamento, valor_receber FROM historico_entrada_treianamento WHERE data_paga BETWEEN '2019-12-01' AND '2019-12-31'");
+while($row = mysqli_fetch_array($result_treinamento_mes_12)){
+  $plane_treinamento_mes_12 = $row['valor_planejamento'];
+  $pago_treinamento_mes_12 =  $row['valor_receber'];
+  $plane_treinamento_mes_12 = str_replace(".", "" ,$plane_treinamento_mes_12);
+  $plane_treinamento_mes_12 = str_replace(",", "" ,$plane_treinamento_mes_12);
+  $pago_treinamento_mes_12 = str_replace(".", "" ,$pago_treinamento_mes_12);
+  $pago_treinamento_mes_12 = str_replace(",", "" ,$pago_treinamento_mes_12);
+  $guarda_plane_treinamento_12 = ($plane_treinamento_mes_12 + $guarda_plane_treinamento_12);
+  $guarda_treinamento_12 = ($pago_treinamento_mes_12 + $guarda_treinamento_12);
+  $plane_treinamento_12 = number_format($guarda_plane_treinamento_12/100,2,",",".");
+  $pago_treinamento_12 = number_format($guarda_treinamento_12/100,2,",",".");
+}
+/*Fim Das Querys Treinamentos*/
+$total_formatar_plane_01 = ($guarda_plane_ferramentas_01 + $guarda_plane_customizacoes_01 + $guarda_plane_treinamento_01);
+$total_formatar_plane_02 = ($guarda_plane_ferramentas_02 + $guarda_plane_customizacoes_02 + $guarda_plane_treinamento_02);
+$total_formatar_plane_03 = ($guarda_plane_ferramentas_03 + $guarda_plane_customizacoes_03 + $guarda_plane_treinamento_03);
+$total_formatar_plane_04 = ($guarda_plane_ferramentas_04 + $guarda_plane_customizacoes_04 + $guarda_plane_treinamento_04);
+$total_formatar_plane_05 = ($guarda_plane_ferramentas_05 + $guarda_plane_customizacoes_05 + $guarda_plane_treinamento_05);
+$total_formatar_plane_06 = ($guarda_plane_ferramentas_06 + $guarda_plane_customizacoes_06 + $guarda_plane_treinamento_06);
+$total_formatar_plane_07 = ($guarda_plane_ferramentas_07 + $guarda_plane_customizacoes_07 + $guarda_plane_treinamento_07);
+$total_formatar_plane_08 = ($guarda_plane_ferramentas_08 + $guarda_plane_customizacoes_08 + $guarda_plane_treinamento_08);
+$total_formatar_plane_09 = ($guarda_plane_ferramentas_09 + $guarda_plane_customizacoes_09 + $guarda_plane_treinamento_09);
+$total_formatar_plane_10 = ($guarda_plane_ferramentas_10 + $guarda_plane_customizacoes_10 + $guarda_plane_treinamento_10);
+$total_formatar_plane_11 = ($guarda_plane_ferramentas_11 + $guarda_plane_customizacoes_11 + $guarda_plane_treinamento_11);
+$total_formatar_plane_12 = ($guarda_plane_ferramentas_12 + $guarda_plane_customizacoes_12 + $guarda_plane_treinamento_12);
+$total_formatar_pago_01 = ($guarda_ferramentas_01 + $guarda_customizacoes_01 + $guarda_treinamento_01);
+$total_formatar_pago_02 = ($guarda_ferramentas_02 + $guarda_customizacoes_02 + $guarda_treinamento_02);
+$total_formatar_pago_03 = ($guarda_ferramentas_03 + $guarda_customizacoes_03 + $guarda_treinamento_03);
+$total_formatar_pago_04 = ($guarda_ferramentas_04 + $guarda_customizacoes_04 + $guarda_treinamento_04);
+$total_formatar_pago_05 = ($guarda_ferramentas_05 + $guarda_customizacoes_05 + $guarda_treinamento_05);
+$total_formatar_pago_06 = ($guarda_ferramentas_06 + $guarda_customizacoes_06 + $guarda_treinamento_06);
+$total_formatar_pago_07 = ($guarda_ferramentas_07 + $guarda_customizacoes_07 + $guarda_treinamento_07);
+$total_formatar_pago_08 = ($guarda_ferramentas_08 + $guarda_customizacoes_08 + $guarda_treinamento_08);
+$total_formatar_pago_09 = ($guarda_ferramentas_09 + $guarda_customizacoes_09 + $guarda_treinamento_09);
+$total_formatar_pago_10 = ($guarda_ferramentas_10 + $guarda_customizacoes_10 + $guarda_treinamento_10);
+$total_formatar_pago_11 = ($guarda_ferramentas_11 + $guarda_customizacoes_11 + $guarda_treinamento_11);
+$total_formatar_pago_12 = ($guarda_ferramentas_12 + $guarda_customizacoes_12 + $guarda_treinamento_12);
+
+$total_formatado_plane_01 = number_format($total_formatar_plane_01/100,2,",",".");
+$total_formatado_plane_02 = number_format($total_formatar_plane_02/100,2,",",".");
+$total_formatado_plane_03 = number_format($total_formatar_plane_03/100,2,",",".");
+$total_formatado_plane_04 = number_format($total_formatar_plane_04/100,2,",",".");
+$total_formatado_plane_05 = number_format($total_formatar_plane_05/100,2,",",".");
+$total_formatado_plane_06 = number_format($total_formatar_plane_06/100,2,",",".");
+$total_formatado_plane_07 = number_format($total_formatar_plane_07/100,2,",",".");
+$total_formatado_plane_08 = number_format($total_formatar_plane_08/100,2,",",".");
+$total_formatado_plane_09 = number_format($total_formatar_plane_09/100,2,",",".");
+$total_formatado_plane_10 = number_format($total_formatar_plane_10/100,2,",",".");
+$total_formatado_plane_11 = number_format($total_formatar_plane_11/100,2,",",".");
+$total_formatado_plane_12 = number_format($total_formatar_plane_12/100,2,",",".");
+
+$total_formatado_pago_01 = number_format($total_formatar_pago_01/100,2,",",".");
+$total_formatado_pago_02 = number_format($total_formatar_pago_02/100,2,",",".");
+$total_formatado_pago_03 = number_format($total_formatar_pago_03/100,2,",",".");
+$total_formatado_pago_04 = number_format($total_formatar_pago_04/100,2,",",".");
+$total_formatado_pago_05 = number_format($total_formatar_pago_05/100,2,",",".");
+$total_formatado_pago_06 = number_format($total_formatar_pago_06/100,2,",",".");
+$total_formatado_pago_07 = number_format($total_formatar_pago_07/100,2,",",".");
+$total_formatado_pago_08 = number_format($total_formatar_pago_08/100,2,",",".");
+$total_formatado_pago_09 = number_format($total_formatar_pago_09/100,2,",",".");
+$total_formatado_pago_10 = number_format($total_formatar_pago_10/100,2,",",".");
+$total_formatado_pago_11 = number_format($total_formatar_pago_11/100,2,",",".");
+$total_formatado_pago_12 = number_format($total_formatar_pago_12/100,2,",",".");
+?>
